@@ -1,10 +1,13 @@
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextFormField extends StatelessWidget {
   final String? hintText;
-final  void Function(String)? onChanged;
+  final void Function(String)? onChanged;
+  final List<TextInputFormatter>? inputFormatters;
+
   final double? hintTextSize;
   final Widget? labelText;
   final Widget? suffixIcon;
@@ -19,7 +22,8 @@ final  void Function(String)? onChanged;
   final TextEditingController? controller;
   final int? maxLine;
   final int? minLines;
-final String ? textTopFailed;
+  final String? textTopFailed;
+
   const AppTextFormField({
     super.key,
     this.hintText,
@@ -35,7 +39,9 @@ final String ? textTopFailed;
     this.autoFocus,
     this.onEditingComplete,
     this.maxLine,
-    this.minLines, this.textTopFailed, this.onChanged,
+    this.minLines,
+    this.textTopFailed,
+    this.onChanged,  this.inputFormatters,
   });
 
   @override
@@ -44,11 +50,13 @@ final String ? textTopFailed;
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 5.w),
-          child: Text(textTopFailed ?? '',),
+          padding: EdgeInsets.symmetric(horizontal: 5.w),
+          child: Text(
+            textTopFailed ?? '',
+          ),
         ),
         TextFormField(
-        onChanged: onChanged,
+          onChanged: onChanged,
           autofocus: autoFocus ?? false,
           textInputAction: textInputAction,
           keyboardType: keyboardType,
@@ -109,6 +117,7 @@ final String ? textTopFailed;
             filled: true,
             fillColor: Colors.white,
           ),
+          inputFormatters: inputFormatters,
         ),
       ],
     );

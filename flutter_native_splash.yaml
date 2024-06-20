@@ -1,8 +1,8 @@
 flutter_native_splash:
 
   color: "#00ADCF"
-  image: assets/images/egy_bus_logo.png
+  image: assets/images/egy_bus_logo1.png
 
   android_12:
    color: "#00ADCF"
-   image: assets/images/egy_bus_logo_android_12.png
+   image: assets/images/egy_bus_logo12.png

@@ -4,6 +4,7 @@ import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_loading.dart';
 import 'package:egy_bus/core/widgets/app_text_button.dart';
+import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_cubit.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
 import 'package:egy_bus/features/passenger_home/ui/station_trip_item.dart';
@@ -68,10 +69,10 @@ class PassengerHomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => StationTripItem(
-                                      data: data[index],
-                                    )));
+                            // Navigator.of(context).push(MaterialPageRoute(
+                            //     builder: (_) => StationTripItem(
+                            //           data: data[index],
+                            //         )));
                           },
                           child: Container(
                             height: 261.h,
@@ -261,18 +262,24 @@ class PassengerHomeScreen extends StatelessWidget {
                                                       const Color(0xff00ADCF)),
                                         ),
                                         const Spacer(),
-
                                         BlocBuilder<PassengerHomeCubit,
                                             PassengerHomeState>(
                                           builder: (context, state) {
-                                            bool isLoading = state is AddBookLoading &&
-                                                state.index == index;
+                                            bool isLoading =
+                                                state is AddBookLoading &&
+                                                    state.index == index;
                                             return AppTextButton(
                                               onPressed: () {
                                                 context
                                                     .read<PassengerHomeCubit>()
-                                                    .emitAddBook(index).then((onValue){
-                                                      Navigator.of(context).push( MaterialPageRoute(builder: (_)=>const BookCompletedScreen()));
+                                                    .emitAddBook(index)
+                                                    .then((onValue) {
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                      builder: (_) =>
+                                                          StationTripItem(data: data[index],),
+                                                    ),
+                                                  );
                                                 });
                                               },
                                               text: isLoading
@@ -310,6 +317,7 @@ class PassengerHomeScreen extends StatelessWidget {
     );
   }
 }
+
 class BookCompletedScreen extends StatelessWidget {
   const BookCompletedScreen({super.key});
 

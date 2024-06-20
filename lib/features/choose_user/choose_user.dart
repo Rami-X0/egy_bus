@@ -40,7 +40,7 @@ class ChooseAccountUser extends StatelessWidget {
                       color: ColorsManager.mainColor,
                       shape: BoxShape.circle,
                       image: const DecorationImage(
-                        image: AssetImage('assets/images/egy_bus_logo.png'),
+                        image: AssetImage('assets/images/egy_bus_logo1.png'),
                       ),
                     ),
                   ),

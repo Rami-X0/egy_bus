@@ -2,6 +2,7 @@ import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/widgets/app_text_form_field.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,14 +29,11 @@ class _FormDriverAddTripState extends State<FormDriverAddTrip> {
           Gap(20.h),
           AppTextFormField(
             keyboardType: TextInputType.text,
-            controller:
-                context.read<DriverHomeCubit>().busPlateController,
+            controller: context.read<DriverHomeCubit>().busPlateController,
             hintText: 'bus plate',
             suffixIcon: FaIcon(
               FontAwesomeIcons.caravan,
-              color: isBusPlateTripColorFailureIcon
-                  ? Colors.red
-                  : ColorsManager.mainColor,
+              color: isBusPlateTripColorFailureIcon ? Colors.red : ColorsManager.mainColor,
             ),
             validator: (value) {
               return validateBusPlate(value);
@@ -47,19 +45,19 @@ class _FormDriverAddTripState extends State<FormDriverAddTrip> {
               Flexible(
                 flex: 1,
                 child: AppTextFormField(
-                  keyboardType: TextInputType.text,
-                  controller:
-                      context.read<DriverHomeCubit>().priceTripController,
+                  keyboardType: TextInputType.number,
+                  controller: context.read<DriverHomeCubit>().priceTripController,
                   hintText: 'price',
                   suffixIcon: FaIcon(
                     FontAwesomeIcons.barcode,
-                    color: isPriceTripColorFailureIcon
-                        ? Colors.red
-                        : ColorsManager.mainColor,
+                    color: isPriceTripColorFailureIcon ? Colors.red : ColorsManager.mainColor,
                   ),
                   validator: (value) {
-                    return validateTripePrice(value);
+                    return validateTripPrice(value);
                   },
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
                 ),
               ),
               Gap(2.w),
@@ -67,19 +65,19 @@ class _FormDriverAddTripState extends State<FormDriverAddTrip> {
                 flex: 1,
                 child: AppTextFormField(
                   // hintTextSize: 11.sp,
-                  keyboardType: TextInputType.text,
-                  controller:
-                      context.read<DriverHomeCubit>().availableSeatsTripController,
+                  keyboardType: TextInputType.number,
+                  controller: context.read<DriverHomeCubit>().availableSeatsTripController,
                   hintText: 'available',
                   suffixIcon: FaIcon(
                     FontAwesomeIcons.chalkboard,
-                    color: isAvailableStatsTripColorFailureIcon
-                        ? Colors.red
-                        : ColorsManager.mainColor,
+                    color: isAvailableStatsTripColorFailureIcon ? Colors.red : ColorsManager.mainColor,
                   ),
                   validator: (value) {
                     return validateAvailableStats(value);
                   },
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
                 ),
               ),
             ],
@@ -89,17 +87,21 @@ class _FormDriverAddTripState extends State<FormDriverAddTrip> {
     );
   }
 
-  String? validateTripePrice(String? value) {
+  String? validateTripPrice(String? value) {
     if (value == null || value.isEmpty) {
       setState(() {
         isPriceTripColorFailureIcon = true;
       });
-      return 'enter price';
-    } else {
-      setState(() {
-        isPriceTripColorFailureIcon = false;
-      });
+      return 'Please enter a number';
     }
+    final number = int.tryParse(value);
+    if (number == null) {
+      setState(() {
+        isPriceTripColorFailureIcon = true;
+      });
+      return 'Please enter a valid number';
+    }
+
     return null;
   }
 
@@ -123,11 +125,23 @@ class _FormDriverAddTripState extends State<FormDriverAddTrip> {
         isAvailableStatsTripColorFailureIcon = true;
       });
       return 'enter available state';
-    } else {
-      setState(() {
-        isAvailableStatsTripColorFailureIcon = false;
-      });
     }
+    final number = int.tryParse(value);
+    if (number == null) {
+      setState(() {
+        isAvailableStatsTripColorFailureIcon = true;
+      });
+      return 'Please enter a valid number';
+    }
+    if (number < 1 || number > 14) {
+      setState(() {
+        isAvailableStatsTripColorFailureIcon = true;
+      });
+      return 'Number must be between 1 and 14';
+    }
+    setState(() {
+      isAvailableStatsTripColorFailureIcon = false;
+    });
     return null;
   }
 }
