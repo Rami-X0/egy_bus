@@ -12,6 +12,7 @@ class AppSharedPrefKey {
   static String passengerLat = 'passengerLat';
   static String stationLat = 'stationLat';
   static String stationLong = 'stationLong';
+  static String passengerName = 'passengerName';
 }
 
 var driverUserId =
@@ -35,3 +36,5 @@ var stationLong =
     AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.stationLong);
 var stationLat =
     AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.stationLat);
+var passengerName =
+    AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerName);

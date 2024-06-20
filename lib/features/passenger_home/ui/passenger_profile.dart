@@ -63,6 +63,7 @@ class PassengerProfile extends StatelessWidget {
                             AppSharedPref.removeKey(key: AppSharedPrefKey.passengerUserId);
                             AppSharedPref.removeKey(key: AppSharedPrefKey.passengerIdFrom);
                             AppSharedPref.removeKey(key: AppSharedPrefKey.passengerIdTo);
+                            AppSharedPref.removeKey(key: AppSharedPrefKey.passengerName);
                           },
                           text: 'logOut',
                             textStyle: TextStyles.font28WhiteSemiBold.copyWith(

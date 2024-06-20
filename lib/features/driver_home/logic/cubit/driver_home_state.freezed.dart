@@ -34,6 +34,9 @@ mixin _$DriverHomeState {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,6 +57,9 @@ mixin _$DriverHomeState {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,6 +79,9 @@ mixin _$DriverHomeState {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -94,6 +103,9 @@ mixin _$DriverHomeState {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +123,9 @@ mixin _$DriverHomeState {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -128,6 +143,9 @@ mixin _$DriverHomeState {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -205,6 +223,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return initial();
   }
@@ -228,6 +249,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return initial?.call();
   }
@@ -250,6 +274,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -277,6 +304,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return initial(this);
   }
@@ -297,6 +327,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return initial?.call(this);
   }
@@ -317,6 +350,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -386,6 +422,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return getStationLineLoading();
   }
@@ -409,6 +448,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return getStationLineLoading?.call();
   }
@@ -431,6 +473,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -458,6 +503,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return getStationLineLoading(this);
   }
@@ -478,6 +526,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return getStationLineLoading?.call(this);
   }
@@ -498,6 +549,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -604,6 +658,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return getStationLineSuccess(driverStationLinkResponse);
   }
@@ -627,6 +684,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return getStationLineSuccess?.call(driverStationLinkResponse);
   }
@@ -649,6 +709,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -676,6 +739,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return getStationLineSuccess(this);
   }
@@ -696,6 +762,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return getStationLineSuccess?.call(this);
   }
@@ -716,6 +785,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -819,6 +891,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return getStationLineFailure(apiError);
   }
@@ -842,6 +917,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return getStationLineFailure?.call(apiError);
   }
@@ -864,6 +942,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -891,6 +972,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return getStationLineFailure(this);
   }
@@ -911,6 +995,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return getStationLineFailure?.call(this);
   }
@@ -931,6 +1018,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -1004,6 +1094,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return postBusLineLoading();
   }
@@ -1027,6 +1120,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return postBusLineLoading?.call();
   }
@@ -1049,6 +1145,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -1076,6 +1175,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return postBusLineLoading(this);
   }
@@ -1096,6 +1198,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return postBusLineLoading?.call(this);
   }
@@ -1116,6 +1221,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -1183,6 +1291,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return postBusLineSuccess();
   }
@@ -1206,6 +1317,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return postBusLineSuccess?.call();
   }
@@ -1228,6 +1342,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -1255,6 +1372,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return postBusLineSuccess(this);
   }
@@ -1275,6 +1395,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return postBusLineSuccess?.call(this);
   }
@@ -1295,6 +1418,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -1390,6 +1516,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return postBusLineFailure(apiError);
   }
@@ -1413,6 +1542,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return postBusLineFailure?.call(apiError);
   }
@@ -1435,6 +1567,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -1462,6 +1597,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return postBusLineFailure(this);
   }
@@ -1482,6 +1620,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return postBusLineFailure?.call(this);
   }
@@ -1502,6 +1643,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -1575,6 +1719,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return allTripsLoading();
   }
@@ -1598,6 +1745,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return allTripsLoading?.call();
   }
@@ -1620,6 +1770,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -1647,6 +1800,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return allTripsLoading(this);
   }
@@ -1667,6 +1823,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return allTripsLoading?.call(this);
   }
@@ -1687,6 +1846,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -1791,6 +1953,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return allTripsSuccess(allTripsResponseList);
   }
@@ -1814,6 +1979,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return allTripsSuccess?.call(allTripsResponseList);
   }
@@ -1836,6 +2004,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -1863,6 +2034,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return allTripsSuccess(this);
   }
@@ -1883,6 +2057,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return allTripsSuccess?.call(this);
   }
@@ -1903,6 +2080,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -2005,6 +2185,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return allTripsFailure(apiError);
   }
@@ -2028,6 +2211,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return allTripsFailure?.call(apiError);
   }
@@ -2050,6 +2236,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -2077,6 +2266,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return allTripsFailure(this);
   }
@@ -2097,6 +2289,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return allTripsFailure?.call(this);
   }
@@ -2117,6 +2312,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -2190,6 +2388,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return addTripsLoading();
   }
@@ -2213,6 +2414,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return addTripsLoading?.call();
   }
@@ -2235,6 +2439,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -2262,6 +2469,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return addTripsLoading(this);
   }
@@ -2282,6 +2492,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return addTripsLoading?.call(this);
   }
@@ -2302,6 +2515,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -2369,6 +2585,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return addTripsSuccess();
   }
@@ -2392,6 +2611,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return addTripsSuccess?.call();
   }
@@ -2414,6 +2636,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -2441,6 +2666,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return addTripsSuccess(this);
   }
@@ -2461,6 +2689,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return addTripsSuccess?.call(this);
   }
@@ -2481,6 +2712,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -2576,6 +2810,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
   }) {
     return addTripsFailure(apiError);
   }
@@ -2599,6 +2836,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
   }) {
     return addTripsFailure?.call(apiError);
   }
@@ -2621,6 +2861,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -2648,6 +2891,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function(AddTripsLoading value) addTripsLoading,
     required TResult Function(AddTripsSuccess value) addTripsSuccess,
     required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
   }) {
     return addTripsFailure(this);
   }
@@ -2668,6 +2914,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function(AddTripsLoading value)? addTripsLoading,
     TResult? Function(AddTripsSuccess value)? addTripsSuccess,
     TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
   }) {
     return addTripsFailure?.call(this);
   }
@@ -2688,6 +2937,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function(AddTripsLoading value)? addTripsLoading,
     TResult Function(AddTripsSuccess value)? addTripsSuccess,
     TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -2704,5 +2956,630 @@ abstract class AddTripsFailure implements DriverHomeState {
   DioException get apiError;
   @JsonKey(ignore: true)
   _$$AddTripsFailureImplCopyWith<_$AddTripsFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteTripsLoadingImplCopyWith<$Res> {
+  factory _$$DeleteTripsLoadingImplCopyWith(_$DeleteTripsLoadingImpl value,
+          $Res Function(_$DeleteTripsLoadingImpl) then) =
+      __$$DeleteTripsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteTripsLoadingImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DeleteTripsLoadingImpl>
+    implements _$$DeleteTripsLoadingImplCopyWith<$Res> {
+  __$$DeleteTripsLoadingImplCopyWithImpl(_$DeleteTripsLoadingImpl _value,
+      $Res Function(_$DeleteTripsLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
+  const _$DeleteTripsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'DriverHomeState.deleteTripsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteTripsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+  }) {
+    return deleteTripsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+  }) {
+    return deleteTripsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsLoading != null) {
+      return deleteTripsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+  }) {
+    return deleteTripsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+  }) {
+    return deleteTripsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsLoading != null) {
+      return deleteTripsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTripsLoading implements DriverHomeState {
+  const factory DeleteTripsLoading() = _$DeleteTripsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteTripsSuccessImplCopyWith<$Res> {
+  factory _$$DeleteTripsSuccessImplCopyWith(_$DeleteTripsSuccessImpl value,
+          $Res Function(_$DeleteTripsSuccessImpl) then) =
+      __$$DeleteTripsSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteTripsSuccessImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DeleteTripsSuccessImpl>
+    implements _$$DeleteTripsSuccessImplCopyWith<$Res> {
+  __$$DeleteTripsSuccessImplCopyWithImpl(_$DeleteTripsSuccessImpl _value,
+      $Res Function(_$DeleteTripsSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
+  const _$DeleteTripsSuccessImpl();
+
+  @override
+  String toString() {
+    return 'DriverHomeState.deleteTripsSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteTripsSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+  }) {
+    return deleteTripsSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+  }) {
+    return deleteTripsSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsSuccess != null) {
+      return deleteTripsSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+  }) {
+    return deleteTripsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+  }) {
+    return deleteTripsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsSuccess != null) {
+      return deleteTripsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTripsSuccess implements DriverHomeState {
+  const factory DeleteTripsSuccess() = _$DeleteTripsSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteTripsFailureImplCopyWith<$Res> {
+  factory _$$DeleteTripsFailureImplCopyWith(_$DeleteTripsFailureImpl value,
+          $Res Function(_$DeleteTripsFailureImpl) then) =
+      __$$DeleteTripsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DioException apiError});
+}
+
+/// @nodoc
+class __$$DeleteTripsFailureImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DeleteTripsFailureImpl>
+    implements _$$DeleteTripsFailureImplCopyWith<$Res> {
+  __$$DeleteTripsFailureImplCopyWithImpl(_$DeleteTripsFailureImpl _value,
+      $Res Function(_$DeleteTripsFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiError = null,
+  }) {
+    return _then(_$DeleteTripsFailureImpl(
+      apiError: null == apiError
+          ? _value.apiError
+          : apiError // ignore: cast_nullable_to_non_nullable
+              as DioException,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
+  const _$DeleteTripsFailureImpl({required this.apiError});
+
+  @override
+  final DioException apiError;
+
+  @override
+  String toString() {
+    return 'DriverHomeState.deleteTripsFailure(apiError: $apiError)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteTripsFailureImpl &&
+            (identical(other.apiError, apiError) ||
+                other.apiError == apiError));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiError);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteTripsFailureImplCopyWith<_$DeleteTripsFailureImpl> get copyWith =>
+      __$$DeleteTripsFailureImplCopyWithImpl<_$DeleteTripsFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+  }) {
+    return deleteTripsFailure(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+  }) {
+    return deleteTripsFailure?.call(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsFailure != null) {
+      return deleteTripsFailure(apiError);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+  }) {
+    return deleteTripsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+  }) {
+    return deleteTripsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    required TResult orElse(),
+  }) {
+    if (deleteTripsFailure != null) {
+      return deleteTripsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteTripsFailure implements DriverHomeState {
+  const factory DeleteTripsFailure({required final DioException apiError}) =
+      _$DeleteTripsFailureImpl;
+
+  DioException get apiError;
+  @JsonKey(ignore: true)
+  _$$DeleteTripsFailureImplCopyWith<_$DeleteTripsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

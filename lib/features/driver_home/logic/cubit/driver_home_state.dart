@@ -39,4 +39,11 @@ class DriverHomeState with _$DriverHomeState {
 
   const factory DriverHomeState.addTripsFailure(
       {required DioException apiError}) = AddTripsFailure;
+
+  const factory DriverHomeState.deleteTripsLoading() = DeleteTripsLoading;
+
+  const factory DriverHomeState.deleteTripsSuccess() = DeleteTripsSuccess;
+
+  const factory DriverHomeState.deleteTripsFailure(
+      {required DioException apiError}) = DeleteTripsFailure;
 }

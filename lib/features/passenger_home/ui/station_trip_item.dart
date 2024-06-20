@@ -1,3 +1,4 @@
+import 'package:egy_bus/core/caching/app_shared_pref_key.dart';
 import 'package:egy_bus/core/helper/extension.dart';
 import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class StationTripItem extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(data.driverName.toString()),
+        title: Text(passengerName.toString()),
         centerTitle: true,
       ),
       body: Padding(
@@ -169,7 +170,7 @@ class StationTripItem extends StatelessWidget {
                                 ),
                                 SizedBox(height: 4.0.h),
                                 Text(
-                                  data.driverName,
+                                  passengerName,
                                   style: TextStyle(
                                     fontSize: 16.0.sp,
                                     fontWeight: FontWeight.bold,

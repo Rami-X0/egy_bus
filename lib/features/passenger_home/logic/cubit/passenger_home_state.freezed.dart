@@ -23,6 +23,9 @@ mixin _$PassengerHomeState {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -51,6 +54,9 @@ mixin _$PassengerHomeState {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -77,6 +83,9 @@ mixin _$PassengerHomeState {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -105,6 +114,9 @@ mixin _$PassengerHomeState {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -134,6 +146,8 @@ mixin _$PassengerHomeState {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -159,6 +173,8 @@ mixin _$PassengerHomeState {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -242,6 +258,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -273,6 +292,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -302,6 +324,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -336,6 +361,9 @@ class _$InitialImpl implements _Initial {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -368,6 +396,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -396,6 +426,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -474,6 +506,9 @@ class _$GetStationPassengerLineLoadingImpl
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -505,6 +540,9 @@ class _$GetStationPassengerLineLoadingImpl
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -534,6 +572,9 @@ class _$GetStationPassengerLineLoadingImpl
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -568,6 +609,9 @@ class _$GetStationPassengerLineLoadingImpl
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -600,6 +644,8 @@ class _$GetStationPassengerLineLoadingImpl
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -628,6 +674,8 @@ class _$GetStationPassengerLineLoadingImpl
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -741,6 +789,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -772,6 +823,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -801,6 +855,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -835,6 +892,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -867,6 +927,8 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -895,6 +957,8 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -930,6 +994,538 @@ abstract class GetStationLineSuccess implements PassengerHomeState {
   @JsonKey(ignore: true)
   _$$GetStationLineSuccessImplCopyWith<_$GetStationLineSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetStationLineLoadingImplCopyWith<$Res> {
+  factory _$$GetStationLineLoadingImplCopyWith(
+          _$GetStationLineLoadingImpl value,
+          $Res Function(_$GetStationLineLoadingImpl) then) =
+      __$$GetStationLineLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetStationLineLoadingImplCopyWithImpl<$Res>
+    extends _$PassengerHomeStateCopyWithImpl<$Res, _$GetStationLineLoadingImpl>
+    implements _$$GetStationLineLoadingImplCopyWith<$Res> {
+  __$$GetStationLineLoadingImplCopyWithImpl(_$GetStationLineLoadingImpl _value,
+      $Res Function(_$GetStationLineLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetStationLineLoadingImpl implements GetStationLineLoading {
+  const _$GetStationLineLoadingImpl();
+
+  @override
+  String toString() {
+    return 'PassengerHomeState.getStationLineLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetStationLineLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationPassengerLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookSuccess,
+    required TResult Function(DioException apiError) addBookFailure,
+    required TResult Function() passengerProfileLoading,
+    required TResult Function(PassengerProfileResponse data)
+        passengerProfileSuccess,
+    required TResult Function(DioException apiError) passengerProfileFailure,
+    required TResult Function() passengerGoingToHome,
+  }) {
+    return getStationLineLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationPassengerLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookSuccess,
+    TResult? Function(DioException apiError)? addBookFailure,
+    TResult? Function()? passengerProfileLoading,
+    TResult? Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult? Function(DioException apiError)? passengerProfileFailure,
+    TResult? Function()? passengerGoingToHome,
+  }) {
+    return getStationLineLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationPassengerLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookSuccess,
+    TResult Function(DioException apiError)? addBookFailure,
+    TResult Function()? passengerProfileLoading,
+    TResult Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult Function(DioException apiError)? passengerProfileFailure,
+    TResult Function()? passengerGoingToHome,
+    required TResult orElse(),
+  }) {
+    if (getStationLineLoading != null) {
+      return getStationLineLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationPassengerLineLoading value)
+        getStationPassengerLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(AddBookLoading value) addBookLoading,
+    required TResult Function(AddBookSuccess value) addBookSuccess,
+    required TResult Function(AddBookFailure value) addBookFailure,
+    required TResult Function(PassengerProfileLoading value)
+        passengerProfileLoading,
+    required TResult Function(PassengerProfileSuccess value)
+        passengerProfileSuccess,
+    required TResult Function(PassengerProfileFailure value)
+        passengerProfileFailure,
+    required TResult Function(PassengerGoingToHome value) passengerGoingToHome,
+  }) {
+    return getStationLineLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(AddBookLoading value)? addBookLoading,
+    TResult? Function(AddBookSuccess value)? addBookSuccess,
+    TResult? Function(AddBookFailure value)? addBookFailure,
+    TResult? Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult? Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult? Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult? Function(PassengerGoingToHome value)? passengerGoingToHome,
+  }) {
+    return getStationLineLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(AddBookLoading value)? addBookLoading,
+    TResult Function(AddBookSuccess value)? addBookSuccess,
+    TResult Function(AddBookFailure value)? addBookFailure,
+    TResult Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult Function(PassengerGoingToHome value)? passengerGoingToHome,
+    required TResult orElse(),
+  }) {
+    if (getStationLineLoading != null) {
+      return getStationLineLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetStationLineLoading implements PassengerHomeState {
+  const factory GetStationLineLoading() = _$GetStationLineLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetBusLineSuccessImplCopyWith<$Res> {
+  factory _$$GetBusLineSuccessImplCopyWith(_$GetBusLineSuccessImpl value,
+          $Res Function(_$GetBusLineSuccessImpl) then) =
+      __$$GetBusLineSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<BusLineResponse> driverStationLinkResponse});
+}
+
+/// @nodoc
+class __$$GetBusLineSuccessImplCopyWithImpl<$Res>
+    extends _$PassengerHomeStateCopyWithImpl<$Res, _$GetBusLineSuccessImpl>
+    implements _$$GetBusLineSuccessImplCopyWith<$Res> {
+  __$$GetBusLineSuccessImplCopyWithImpl(_$GetBusLineSuccessImpl _value,
+      $Res Function(_$GetBusLineSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? driverStationLinkResponse = null,
+  }) {
+    return _then(_$GetBusLineSuccessImpl(
+      driverStationLinkResponse: null == driverStationLinkResponse
+          ? _value._driverStationLinkResponse
+          : driverStationLinkResponse // ignore: cast_nullable_to_non_nullable
+              as List<BusLineResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
+  const _$GetBusLineSuccessImpl(
+      {required final List<BusLineResponse> driverStationLinkResponse})
+      : _driverStationLinkResponse = driverStationLinkResponse;
+
+  final List<BusLineResponse> _driverStationLinkResponse;
+  @override
+  List<BusLineResponse> get driverStationLinkResponse {
+    if (_driverStationLinkResponse is EqualUnmodifiableListView)
+      return _driverStationLinkResponse;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_driverStationLinkResponse);
+  }
+
+  @override
+  String toString() {
+    return 'PassengerHomeState.getBusLineSuccess(driverStationLinkResponse: $driverStationLinkResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetBusLineSuccessImpl &&
+            const DeepCollectionEquality().equals(
+                other._driverStationLinkResponse, _driverStationLinkResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_driverStationLinkResponse));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetBusLineSuccessImplCopyWith<_$GetBusLineSuccessImpl> get copyWith =>
+      __$$GetBusLineSuccessImplCopyWithImpl<_$GetBusLineSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationPassengerLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookSuccess,
+    required TResult Function(DioException apiError) addBookFailure,
+    required TResult Function() passengerProfileLoading,
+    required TResult Function(PassengerProfileResponse data)
+        passengerProfileSuccess,
+    required TResult Function(DioException apiError) passengerProfileFailure,
+    required TResult Function() passengerGoingToHome,
+  }) {
+    return getBusLineSuccess(driverStationLinkResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationPassengerLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookSuccess,
+    TResult? Function(DioException apiError)? addBookFailure,
+    TResult? Function()? passengerProfileLoading,
+    TResult? Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult? Function(DioException apiError)? passengerProfileFailure,
+    TResult? Function()? passengerGoingToHome,
+  }) {
+    return getBusLineSuccess?.call(driverStationLinkResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationPassengerLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookSuccess,
+    TResult Function(DioException apiError)? addBookFailure,
+    TResult Function()? passengerProfileLoading,
+    TResult Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult Function(DioException apiError)? passengerProfileFailure,
+    TResult Function()? passengerGoingToHome,
+    required TResult orElse(),
+  }) {
+    if (getBusLineSuccess != null) {
+      return getBusLineSuccess(driverStationLinkResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationPassengerLineLoading value)
+        getStationPassengerLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(AddBookLoading value) addBookLoading,
+    required TResult Function(AddBookSuccess value) addBookSuccess,
+    required TResult Function(AddBookFailure value) addBookFailure,
+    required TResult Function(PassengerProfileLoading value)
+        passengerProfileLoading,
+    required TResult Function(PassengerProfileSuccess value)
+        passengerProfileSuccess,
+    required TResult Function(PassengerProfileFailure value)
+        passengerProfileFailure,
+    required TResult Function(PassengerGoingToHome value) passengerGoingToHome,
+  }) {
+    return getBusLineSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(AddBookLoading value)? addBookLoading,
+    TResult? Function(AddBookSuccess value)? addBookSuccess,
+    TResult? Function(AddBookFailure value)? addBookFailure,
+    TResult? Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult? Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult? Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult? Function(PassengerGoingToHome value)? passengerGoingToHome,
+  }) {
+    return getBusLineSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(AddBookLoading value)? addBookLoading,
+    TResult Function(AddBookSuccess value)? addBookSuccess,
+    TResult Function(AddBookFailure value)? addBookFailure,
+    TResult Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult Function(PassengerGoingToHome value)? passengerGoingToHome,
+    required TResult orElse(),
+  }) {
+    if (getBusLineSuccess != null) {
+      return getBusLineSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetBusLineSuccess implements PassengerHomeState {
+  const factory GetBusLineSuccess(
+          {required final List<BusLineResponse> driverStationLinkResponse}) =
+      _$GetBusLineSuccessImpl;
+
+  List<BusLineResponse> get driverStationLinkResponse;
+  @JsonKey(ignore: true)
+  _$$GetBusLineSuccessImplCopyWith<_$GetBusLineSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1004,6 +1600,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -1035,6 +1634,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -1064,6 +1666,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -1098,6 +1703,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -1130,6 +1738,8 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1158,6 +1768,8 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1237,6 +1849,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -1268,6 +1883,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -1297,6 +1915,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -1331,6 +1952,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -1363,6 +1987,8 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1391,6 +2017,8 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1464,6 +2092,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -1495,6 +2126,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -1524,6 +2158,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -1558,6 +2195,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -1590,6 +2230,8 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1618,6 +2260,8 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1719,6 +2363,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -1750,6 +2397,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -1779,6 +2429,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -1813,6 +2466,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -1845,6 +2501,8 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1873,6 +2531,8 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -1952,6 +2612,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -1983,6 +2646,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -2012,6 +2678,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -2046,6 +2715,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -2078,6 +2750,8 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2106,6 +2780,8 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2216,6 +2892,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -2247,6 +2926,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -2276,6 +2958,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -2310,6 +2995,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -2342,6 +3030,8 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2370,6 +3060,8 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2478,6 +3170,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -2509,6 +3204,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -2538,6 +3236,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -2572,6 +3273,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -2604,6 +3308,8 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2632,6 +3338,8 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2711,6 +3419,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -2742,6 +3453,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -2771,6 +3485,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -2805,6 +3522,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -2837,6 +3557,8 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2865,6 +3587,8 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -2938,6 +3662,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -2969,6 +3696,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -2998,6 +3728,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -3032,6 +3765,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -3064,6 +3800,8 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3092,6 +3830,8 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3193,6 +3933,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -3224,6 +3967,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -3253,6 +3999,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -3287,6 +4036,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -3319,6 +4071,8 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3347,6 +4101,8 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3453,6 +4209,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -3484,6 +4243,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -3513,6 +4275,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -3547,6 +4312,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -3579,6 +4347,8 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3607,6 +4377,8 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3686,6 +4458,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -3717,6 +4492,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -3746,6 +4524,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -3780,6 +4561,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -3812,6 +4596,8 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3840,6 +4626,8 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -3941,6 +4729,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -3972,6 +4763,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -4001,6 +4795,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -4035,6 +4832,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -4067,6 +4867,8 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4095,6 +4897,8 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4178,6 +4982,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -4209,6 +5016,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -4238,6 +5048,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -4272,6 +5085,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -4304,6 +5120,8 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4332,6 +5150,8 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4435,6 +5255,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -4466,6 +5289,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -4495,6 +5321,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -4529,6 +5358,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -4561,6 +5393,8 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4589,6 +5423,8 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4700,6 +5536,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -4731,6 +5570,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -4760,6 +5602,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -4794,6 +5639,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -4826,6 +5674,8 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4854,6 +5704,8 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -4934,6 +5786,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     required TResult Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)
         getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
     required TResult Function(DioException apiError) getStationLineFailure,
     required TResult Function() postBusLineLoading,
     required TResult Function() postBusLineSuccess,
@@ -4965,6 +5820,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult? Function(
             List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult? Function(DioException apiError)? getStationLineFailure,
     TResult? Function()? postBusLineLoading,
     TResult? Function()? postBusLineSuccess,
@@ -4994,6 +5852,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult Function()? getStationPassengerLineLoading,
     TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
         getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
     TResult Function(DioException apiError)? getStationLineFailure,
     TResult Function()? postBusLineLoading,
     TResult Function()? postBusLineSuccess,
@@ -5028,6 +5889,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
         getStationPassengerLineLoading,
     required TResult Function(GetStationLineSuccess value)
         getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
     required TResult Function(GetStationLineFailure value)
         getStationLineFailure,
     required TResult Function(PostBusLineLoading value) postBusLineLoading,
@@ -5060,6 +5924,8 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult? Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult? Function(GetStationLineFailure value)? getStationLineFailure,
     TResult? Function(PostBusLineLoading value)? postBusLineLoading,
     TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
@@ -5088,6 +5954,8 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult Function(GetStationPassengerLineLoading value)?
         getStationPassengerLineLoading,
     TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
     TResult Function(GetStationLineFailure value)? getStationLineFailure,
     TResult Function(PostBusLineLoading value)? postBusLineLoading,
     TResult Function(PostBusLineSuccess value)? postBusLineSuccess,

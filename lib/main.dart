@@ -23,6 +23,7 @@ void main() async{
   passengerLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. passengerLat );
   stationLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. stationLat );
   stationLong=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. stationLong );
+  passengerName=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. passengerName );
   await ScreenUtil.ensureScreenSize();
   runApp(const EgyBus());
 }

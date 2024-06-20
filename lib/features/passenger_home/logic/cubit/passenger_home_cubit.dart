@@ -83,13 +83,13 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
   }
 
   Future<void> emitAddBook(int index) async {
-    emit( PassengerHomeState.addBookLoading(index: index));
+    emit(PassengerHomeState.addBookLoading(index: index));
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
     final response = await _passengerHomeRepo.addBook(
       AddBookModel(
-        passengerLat: passengerLat??positionLat,
-        passengerLon: passengerLong??positionLong,
+        passengerLat: passengerLat ?? positionLat,
+        passengerLon: passengerLong ?? positionLong,
         stationLat: stationLat ?? stationLa,
         stationLon: stationLong ?? stationLon,
       ),
@@ -149,5 +149,18 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
     }
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
+  }
+
+  Future<void> emitBusLineResponse() async {
+    emit(const PassengerHomeState.getStationLineLoading());
+
+    final response = await _passengerHomeRepo.passengerBusLine();
+
+    response.when(
+        success: (data) {
+          emit(PassengerHomeState.getBusLineSuccess(
+              driverStationLinkResponse: data));
+        },
+        failure: (failure) {});
   }
 }

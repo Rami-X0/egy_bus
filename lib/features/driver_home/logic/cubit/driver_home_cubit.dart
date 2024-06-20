@@ -55,9 +55,15 @@ class DriverHomeCubit extends Cubit<DriverHomeState> {
 
   Future<void> emitAllTrip() async {
     emit(const DriverHomeState.allTripsLoading());
-    driverIdFrom=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.driverIdFrom, )??1;
+    driverIdFrom = await AppSharedPref.sharedPrefGet(
+          key: AppSharedPrefKey.driverIdFrom,
+        ) ??
+        1;
 
-    driverIdTo=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.driverIdTo, )??1;
+    driverIdTo = await AppSharedPref.sharedPrefGet(
+          key: AppSharedPrefKey.driverIdTo,
+        ) ??
+        1;
     final int driverFrom = driverIdFrom;
     final int driverTo = driverIdTo;
     final response = await _driverHomeRepo.allTrip(driverFrom, driverTo);
@@ -73,8 +79,8 @@ class DriverHomeCubit extends Cubit<DriverHomeState> {
     emit(const DriverHomeState.addTripsLoading());
     final int availableSeats = int.parse(availableSeatsTripController.text);
     final int price = int.parse(priceTripController.text);
-    final int driverFrom = driverIdFrom??stationIdFrom;
-    final int driverTo = driverIdTo??stationIdTo;
+    final int driverFrom = driverIdFrom ?? stationIdFrom;
+    final int driverTo = driverIdTo ?? stationIdTo;
 
     final response = await _driverHomeRepo.addTrip(
       AddTripeRequest(
@@ -83,7 +89,7 @@ class DriverHomeCubit extends Cubit<DriverHomeState> {
         departureTime: DateTime.now().toUtc().toIso8601String().toString(),
         availableSeats: availableSeats,
         price: price,
-        driverId: 10,
+        driverId: driverUserId,
         busPlate: busPlateController.text,
       ),
     );
@@ -92,6 +98,19 @@ class DriverHomeCubit extends Cubit<DriverHomeState> {
       emit(const DriverHomeState.addTripsSuccess());
     }, failure: (failure) {
       emit(DriverHomeState.addTripsFailure(apiError: failure));
+    });
+  }
+
+  Future<void> emitDeleteTrip(int id) async {
+    emit(const DriverHomeState.deleteTripsLoading());
+
+    final response = await _driverHomeRepo.deleteTrip(id);
+
+    response.when(success: (data) {
+      emit(const DriverHomeState.deleteTripsSuccess());
+    emitAllTrip();
+      }, failure: (failure) {
+      emit(DriverHomeState.deleteTripsFailure(apiError: failure));
     });
   }
 }

@@ -57,9 +57,10 @@ Route generateRoute(RouteSettings settings) {
       );
     case Routes.passengerLogin:
       return MaterialPageRoute(
-        builder: (_) => BlocProvider.value(
-            value: getIt<PassengerLoginCubit>(),
-            child: const PassengerLoginScreen()),
+        builder: (_) => MultiBlocProvider(providers: [
+          BlocProvider.value(value: getIt<PassengerLoginCubit>()),
+          BlocProvider.value(value: getIt<PassengerHomeCubit>()),
+        ], child: const PassengerLoginScreen()),
       );
     case Routes.passengerSignUp:
       return MaterialPageRoute(
@@ -73,12 +74,12 @@ Route generateRoute(RouteSettings settings) {
             value: getIt<PassengerHomeCubit>(),
             child: const PassengerHomeScreen()),
       );
-    case Routes.passengerStationLink:
-      return MaterialPageRoute(
-        builder: (_) => BlocProvider.value(
-            value: getIt<PassengerHomeCubit>(),
-            child: const PassengerStationLinkScreen()),
-      );
+    // case Routes.passengerStationLink:
+    //   return MaterialPageRoute(
+    //     builder: (_) => BlocProvider.value(
+    //         value: getIt<PassengerHomeCubit>(),
+    //         child: const PassengerStationLinkScreen()),
+    //   );
     case Routes.passengerProfile:
       return MaterialPageRoute(
         builder: (_) => BlocProvider.value(

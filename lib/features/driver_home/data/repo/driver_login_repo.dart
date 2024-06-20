@@ -53,4 +53,14 @@ class DriverHomeRepo {
       return ApiResult.failure(failure);
     }
   }
+
+  Future<ApiResult> deleteTrip(int id) async {
+    try {
+      final response = await _apiServices.deleteTrip(id);
+
+      return ApiResult.success(response);
+    } on DioException catch (failure) {
+      return ApiResult.failure(failure);
+    }
+  }
 }

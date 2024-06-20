@@ -5,6 +5,7 @@ import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_loading.dart';
+import 'package:egy_bus/core/widgets/app_text_button.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_cubit.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_state.dart';
 import 'package:egy_bus/features/driver_home/ui/widgets/trip/add_trip_button.dart';
@@ -20,7 +21,6 @@ class DriverHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     context.read<DriverHomeCubit>().emitAllTrip();
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -59,10 +59,20 @@ class DriverHomeScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: BlocBuilder<DriverHomeCubit, DriverHomeState>(
+            buildWhen: (previous, current) =>
+                current is AllTripsLoading ||
+                current is DeleteTripsLoading ||
+                current is AllTripsSuccess ||
+                current is DeleteTripsSuccess ||
+                current is DeleteTripsFailure ||
+                current is AllTripsFailure,
             builder: (context, state) {
               return state.maybeWhen(
                   orElse: () => Container(),
                   allTripsLoading: () {
+                    return const AppLoading();
+                  },
+                  deleteTripsLoading: () {
                     return const AppLoading();
                   },
                   allTripsSuccess: (data) {
@@ -72,7 +82,7 @@ class DriverHomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Container(
                           padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          height: 215.h,
+                          height: 245.h,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
                               border: Border.all(color: Colors.grey)),
@@ -224,7 +234,26 @@ class DriverHomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Text(data[index].busPlate)
+                              Text(data[index].busPlate),
+                              Align(
+                                alignment: Alignment.bottomLeft,
+                                child: AppTextButton(
+                                  onPressed: () {
+                                    context
+                                        .read<DriverHomeCubit>()
+                                        .emitDeleteTrip(data[index].id);
+
+                                  },
+                                  border: 5,
+                                  verticalSize: 30,
+                                  horizontalSize: 100,
+                                  text: "cancel",
+                                  textStyle: TextStyles.font11BlackMedium
+                                      .copyWith(
+                                          color: ColorsManager.white,
+                                          fontSize: 15.sp),
+                                ),
+                              )
                             ],
                           ),
                         );

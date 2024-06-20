@@ -24,8 +24,9 @@ class PassengerLoginCubit extends Cubit<PassengerLoginState> {
       password: passwordController.text,
       username: userNameController.text,
     ));
-    response.when(success: (data) {
-      cachePassengerId(data);
+    response.when(success: (data) async {
+      await cachePassengerId(data);
+      await cachePassengerName(data);
       emit(PassengerLoginState.signUpSuccess(driverLoginResponse: data));
     }, failure: (failure) {
       emit(PassengerLoginState.signUpFailure(apiError: failure));
@@ -37,5 +38,12 @@ class PassengerLoginCubit extends Cubit<PassengerLoginState> {
         key: AppSharedPrefKey.passengerUserId, value: data.userId);
     passengerUserId = await AppSharedPref.sharedPrefGet(
         key: AppSharedPrefKey.passengerUserId);
+  }
+
+  Future<void> cachePassengerName(PassengerLoginResponse data) async {
+    AppSharedPref.sharedPrefSet(
+        key: AppSharedPrefKey.passengerName, value: data.userName);
+    passengerName =
+        await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerName);
   }
 }
