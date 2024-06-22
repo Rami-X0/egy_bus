@@ -4,7 +4,6 @@ import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_loading.dart';
 import 'package:egy_bus/core/widgets/app_text_button.dart';
-import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_cubit.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
 import 'package:egy_bus/features/passenger_home/ui/station_trip_item.dart';
@@ -14,9 +13,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 
-class PassengerHomeScreen extends StatelessWidget {
+class PassengerHomeScreen extends StatefulWidget {
   const PassengerHomeScreen({super.key});
 
+  @override
+  State<PassengerHomeScreen> createState() => _PassengerHomeScreenState();
+}
+
+class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
   @override
   Widget build(BuildContext context) {
     context.read<PassengerHomeCubit>().emitAllTrip();
@@ -74,233 +78,254 @@ class PassengerHomeScreen extends StatelessWidget {
                             //           data: data[index],
                             //         )));
                           },
-                          child: Container(
-                            height: 261.h,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(color: Colors.grey)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 15.w),
-                                  child: Stack(
-                                    children: [
-                                      Text(
-                                        'Station Link ',
-                                        style: TextStyles.font15DarkBlueMedium
-                                            .copyWith(
-                                          fontSize: 20.sp,
-                                          foreground: Paint()
-                                            ..style = PaintingStyle.stroke
-                                            ..strokeWidth = 2.8
-                                            ..color = Colors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Station Link ',
-                                        style: TextStyles.font15DarkBlueMedium
-                                            .copyWith(
-                                          fontSize: 20.sp,
-                                          color: ColorsManager.mainColor,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 8.w),
-                                  child: Row(
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          data[index].fromStationName,
+                          child: Visibility(
+                            visible:
+                                data[index].availableSeats == 0 ? false : true,
+                            child: Container(
+                              height: 261.h,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  border: Border.all(color: Colors.grey)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 15.w),
+                                    child: Stack(
+                                      children: [
+                                        Text(
+                                          'Station Link ',
                                           style: TextStyles.font15DarkBlueMedium
                                               .copyWith(
-                                                  color:
-                                                      const Color(0xff003D48)),
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
+                                            fontSize: 20.sp,
+                                            foreground: Paint()
+                                              ..style = PaintingStyle.stroke
+                                              ..strokeWidth = 2.8
+                                              ..color = Colors.black,
+                                          ),
                                         ),
-                                      ),
-                                      const Spacer(),
-                                      Expanded(
-                                        child: Text(
-                                          data[index].toStationName,
+                                        Text(
+                                          'Station Link ',
                                           style: TextStyles.font15DarkBlueMedium
                                               .copyWith(
-                                                  color:
-                                                      const Color(0xff003D48)),
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Gap(10.h),
-                                Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 8.w),
-                                  child: Row(
-                                    children: [
-                                      const Text(
-                                        'Status',
-                                        style: TextStyle(color: Colors.grey),
-                                      ),
-                                      Gap(5.w),
-                                      CircleAvatar(
-                                        maxRadius: 7.w,
-                                        backgroundColor: Colors.grey,
-                                        child: CircleAvatar(
-                                          backgroundColor: Colors.greenAccent,
-                                          maxRadius: 5.w,
-                                        ),
-                                      ),
-                                      const Spacer(),
-                                      const Text(
-                                        'Available State',
-                                        style: TextStyle(color: Colors.grey),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Gap(10.h),
-                                Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 8.w),
-                                  child: Row(
-                                    children: [
-                                      const Text(
-                                        'Live now',
-                                        style:
-                                            TextStyle(color: Color(0xff666666)),
-                                      ),
-                                      const Spacer(),
-                                      Text(
-                                          data[index].availableSeats.toString())
-                                    ],
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    CircleAvatar(
-                                      maxRadius: 7.w,
-                                      backgroundColor: const Color(0xffB0E6F0),
-                                      child: CircleAvatar(
-                                        backgroundColor:
-                                            const Color(0xff00ADCF),
-                                        maxRadius: 5.w,
-                                      ),
-                                    ),
-                                    Row(
-                                      children: List.generate(
-                                        12,
-                                        (index) => Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 5.0),
-                                          child: Container(
-                                            color: Colors.blue,
-                                            height: 2,
-                                            width: 5,
+                                            fontSize: 20.sp,
+                                            color: ColorsManager.mainColor,
                                           ),
                                         ),
-                                      ),
+                                      ],
                                     ),
-                                    const Icon(
-                                      Icons.train,
-                                      color: Colors.blue,
-                                    ),
-                                    Row(
-                                      children: List.generate(
-                                        12,
-                                        (index) => Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 5.0),
-                                          child: Container(
-                                            color: Colors.blue,
-                                            height: 2,
-                                            width: 5,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    CircleAvatar(
-                                      maxRadius: 7.w,
-                                      backgroundColor: const Color(0xffB0E6F0),
-                                      child: CircleAvatar(
-                                        backgroundColor:
-                                            const Color(0xffE6F7FA),
-                                        maxRadius: 5.w,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(data[index].busPlate),
-                                Container(
-                                  width: double.maxFinite,
-                                  height: 70.h,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        bottomLeft: Radius.circular(15.r),
-                                        bottomRight: Radius.circular(15.r),
-                                      ),
-                                      color: const Color(0xffE6F7FA)),
-                                  child: Padding(
+                                  ),
+                                  Padding(
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 8.w),
                                     child: Row(
                                       children: [
-                                        Text(
-                                          '${data[index].price.toString().replaceAll('.0', '')} EGp',
-                                          style: TextStyles.font15DarkBlueMedium
-                                              .copyWith(
-                                                  color:
-                                                      const Color(0xff00ADCF)),
+                                        Expanded(
+                                          child: Text(
+                                            data[index].fromStationName,
+                                            style: TextStyles
+                                                .font15DarkBlueMedium
+                                                .copyWith(
+                                                    color: const Color(
+                                                        0xff003D48)),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
                                         ),
                                         const Spacer(),
-                                        BlocBuilder<PassengerHomeCubit,
-                                            PassengerHomeState>(
-                                          builder: (context, state) {
-                                            bool isLoading =
-                                                state is AddBookLoading &&
-                                                    state.index == index;
-                                            return AppTextButton(
-                                              onPressed: () {
-                                                context
-                                                    .read<PassengerHomeCubit>()
-                                                    .emitAddBook(index)
-                                                    .then((onValue) {
-                                                  Navigator.of(context).push(
-                                                    MaterialPageRoute(
-                                                      builder: (_) =>
-                                                          StationTripItem(data: data[index],),
-                                                    ),
-                                                  );
-                                                });
-                                              },
-                                              text: isLoading
-                                                  ? 'Loading...'
-                                                  : 'Book Trip',
-                                              textStyle: TextStyles
-                                                  .font28WhiteSemiBold
-                                                  .copyWith(
-                                                fontSize: 15.sp,
-                                              ),
-                                              verticalSize: 15,
-                                              horizontalSize: 180,
-                                              border: 5,
-                                            );
-                                          },
-                                        )
+                                        Expanded(
+                                          child: Text(
+                                            data[index].toStationName,
+                                            style: TextStyles
+                                                .font15DarkBlueMedium
+                                                .copyWith(
+                                                    color: const Color(
+                                                        0xff003D48)),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
-                                ),
-                              ],
+                                  Gap(10.h),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 8.w),
+                                    child: Row(
+                                      children: [
+                                        const Text(
+                                          'Status',
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                        Gap(5.w),
+                                        CircleAvatar(
+                                          maxRadius: 7.w,
+                                          backgroundColor: Colors.grey,
+                                          child: CircleAvatar(
+                                            backgroundColor: Colors.greenAccent,
+                                            maxRadius: 5.w,
+                                          ),
+                                        ),
+                                        const Spacer(),
+                                        const Text(
+                                          'Available State',
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Gap(10.h),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 8.w),
+                                    child: Row(
+                                      children: [
+                                        const Text(
+                                          'Live now',
+                                          style: TextStyle(
+                                              color: Color(0xff666666)),
+                                        ),
+                                        const Spacer(),
+                                        Text(data[index]
+                                            .availableSeats
+                                            .toString())
+                                      ],
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      CircleAvatar(
+                                        maxRadius: 7.w,
+                                        backgroundColor:
+                                            const Color(0xffB0E6F0),
+                                        child: CircleAvatar(
+                                          backgroundColor:
+                                              const Color(0xff00ADCF),
+                                          maxRadius: 5.w,
+                                        ),
+                                      ),
+                                      Row(
+                                        children: List.generate(
+                                          12,
+                                          (index) => Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 5.0),
+                                            child: Container(
+                                              color: Colors.blue,
+                                              height: 2,
+                                              width: 5,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Icon(
+                                        Icons.train,
+                                        color: Colors.blue,
+                                      ),
+                                      Row(
+                                        children: List.generate(
+                                          12,
+                                          (index) => Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 5.0),
+                                            child: Container(
+                                              color: Colors.blue,
+                                              height: 2,
+                                              width: 5,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      CircleAvatar(
+                                        maxRadius: 7.w,
+                                        backgroundColor:
+                                            const Color(0xffB0E6F0),
+                                        child: CircleAvatar(
+                                          backgroundColor:
+                                              const Color(0xffE6F7FA),
+                                          maxRadius: 5.w,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Text(data[index].busPlate),
+                                  Container(
+                                    width: double.maxFinite,
+                                    height: 70.h,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(15.r),
+                                          bottomRight: Radius.circular(15.r),
+                                        ),
+                                        color: const Color(0xffE6F7FA)),
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 8.w),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            '${data[index].price.toString().replaceAll('.0', '')} EGp',
+                                            style: TextStyles
+                                                .font15DarkBlueMedium
+                                                .copyWith(
+                                                    color: const Color(
+                                                        0xff00ADCF)),
+                                          ),
+                                          const Spacer(),
+                                          BlocBuilder<PassengerHomeCubit,
+                                              PassengerHomeState>(
+                                            builder: (context, state) {
+                                              bool isLoading = state
+                                                      is PassengerBooKTripLoading &&
+                                                  state.index == index;
+                                              return AppTextButton(
+                                                onPressed: () {
+                                                  context
+                                                      .read<
+                                                          PassengerHomeCubit>()
+                                                      .emitPassengerBookTrip(
+                                                          data[index].id,
+                                                          index,
+                                                          context)
+                                                      .then(
+                                                    (onValue) {
+
+                                                        Navigator.of(context)
+                                                            .push(
+                                                          MaterialPageRoute(
+                                                            builder: (_) =>
+                                                                StationTripItem(
+                                                              data: data[index],
+                                                            ),
+                                                          ),
+                                                        );
+
+                                                    },
+                                                  );
+                                                },
+                                                text: isLoading
+                                                    ? 'Loading...'
+                                                    : 'Book Trip',
+                                                textStyle: TextStyles
+                                                    .font28WhiteSemiBold
+                                                    .copyWith(
+                                                  fontSize: 15.sp,
+                                                ),
+                                                verticalSize: 15,
+                                                horizontalSize: 180,
+                                                border: 5,
+                                              );
+                                            },
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );

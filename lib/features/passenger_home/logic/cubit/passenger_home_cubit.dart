@@ -1,9 +1,13 @@
 import 'package:egy_bus/core/caching/app_shared_pref.dart';
 import 'package:egy_bus/core/caching/app_shared_pref_key.dart';
+import 'package:egy_bus/core/helper/extension.dart';
+import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/widgets/app_snack_bar.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_add_station_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_login_repo.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_payment_response.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,6 +29,9 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
   double? stationLa;
   double? positionLat;
   double? positionLong;
+  int counter = 1;
+  double? totalValue;
+  int? bookingId;
 
   PassengerHomeCubit(this._passengerHomeRepo)
       : super(const PassengerHomeState.initial());
@@ -82,7 +89,7 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
     });
   }
 
-  Future<void> emitAddBook(int index) async {
+  Future<void> emitAddBook(int index, BuildContext context) async {
     emit(PassengerHomeState.addBookLoading(index: index));
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
     await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
@@ -97,7 +104,13 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
 
     response.when(success: (data) {
       emit(const PassengerHomeState.addBookSuccess());
+      context.pushNamedAndRemoveUntil(Routes.passengerHome);
     }, failure: (failure) {
+      context.pop();
+      appSnackBar(
+          text: 'You can,\ t book this trip',
+          backGroundColor: Colors.red,
+          context: context);
       emit(PassengerHomeState.addBookFailure(apiError: failure));
     });
   }
@@ -162,5 +175,51 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
               driverStationLinkResponse: data));
         },
         failure: (failure) {});
+  }
+
+  Future<void> emitPassengerPayment() async {
+    emit(const PassengerHomeState.passengerPaymentLoading());
+
+    final response = await _passengerHomeRepo.passengerPayment(
+      PassengerPaymentRequest(
+        bookingId: bookingId!,
+        amount: totalValue!.toInt(),
+        paymentDate: DateTime.now().toIso8601String().toString(),
+        paymentTypeId: 2,
+      ),
+    );
+
+    response.when(success: (data) {
+      emit(const PassengerHomeState.passengerPaymentSuccess());
+    }, failure: (failure) {
+      emit(PassengerHomeState.passengerPaymentFailure(apiError: failure));
+    });
+  }
+
+  Future<void> emitPassengerBookTrip(
+      int tripId, int index, BuildContext context) async {
+    emit(PassengerHomeState.passengerBooKTripLoading(index: index));
+
+    final response = await _passengerHomeRepo.passengerBookTrip(
+      PassengerBookTripRequest(
+        passengerId: passengerUserId,
+        tripId: tripId,
+        seatsBooked: 1,
+        amountPaid: 15,
+      ),
+    );
+
+    response.when(success: (data) {
+      bookingId = data.bookingId;
+      emit(PassengerHomeState.passengerBooKTripSuccess(response: data));
+      appSnackBar(
+          text: data.message, backGroundColor: Colors.green, context: context);
+    }, failure: (failure) {
+      emit(PassengerHomeState.passengerBooKTripFailure(failure: failure));
+      appSnackBar(
+          text: 'can\'t book this trip',
+          backGroundColor: Colors.red,
+          context: context);
+    });
   }
 }

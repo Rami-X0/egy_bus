@@ -37,6 +37,10 @@ mixin _$DriverHomeState {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +64,10 @@ mixin _$DriverHomeState {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +90,10 @@ mixin _$DriverHomeState {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -106,6 +118,11 @@ mixin _$DriverHomeState {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,6 +143,10 @@ mixin _$DriverHomeState {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -146,6 +167,10 @@ mixin _$DriverHomeState {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -226,6 +251,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return initial();
   }
@@ -252,6 +281,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return initial?.call();
   }
@@ -277,6 +310,10 @@ class _$InitialImpl implements _Initial {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -307,6 +344,11 @@ class _$InitialImpl implements _Initial {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return initial(this);
   }
@@ -330,6 +372,10 @@ class _$InitialImpl implements _Initial {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return initial?.call(this);
   }
@@ -353,6 +399,10 @@ class _$InitialImpl implements _Initial {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -425,6 +475,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return getStationLineLoading();
   }
@@ -451,6 +505,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return getStationLineLoading?.call();
   }
@@ -476,6 +534,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -506,6 +568,11 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return getStationLineLoading(this);
   }
@@ -529,6 +596,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return getStationLineLoading?.call(this);
   }
@@ -552,6 +623,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -661,6 +736,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return getStationLineSuccess(driverStationLinkResponse);
   }
@@ -687,6 +766,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return getStationLineSuccess?.call(driverStationLinkResponse);
   }
@@ -712,6 +795,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -742,6 +829,11 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return getStationLineSuccess(this);
   }
@@ -765,6 +857,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return getStationLineSuccess?.call(this);
   }
@@ -788,6 +884,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -894,6 +994,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return getStationLineFailure(apiError);
   }
@@ -920,6 +1024,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return getStationLineFailure?.call(apiError);
   }
@@ -945,6 +1053,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -975,6 +1087,11 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return getStationLineFailure(this);
   }
@@ -998,6 +1115,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return getStationLineFailure?.call(this);
   }
@@ -1021,6 +1142,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -1097,6 +1222,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return postBusLineLoading();
   }
@@ -1123,6 +1252,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return postBusLineLoading?.call();
   }
@@ -1148,6 +1281,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -1178,6 +1315,11 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return postBusLineLoading(this);
   }
@@ -1201,6 +1343,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return postBusLineLoading?.call(this);
   }
@@ -1224,6 +1370,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -1294,6 +1444,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return postBusLineSuccess();
   }
@@ -1320,6 +1474,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return postBusLineSuccess?.call();
   }
@@ -1345,6 +1503,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -1375,6 +1537,11 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return postBusLineSuccess(this);
   }
@@ -1398,6 +1565,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return postBusLineSuccess?.call(this);
   }
@@ -1421,6 +1592,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -1519,6 +1694,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return postBusLineFailure(apiError);
   }
@@ -1545,6 +1724,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return postBusLineFailure?.call(apiError);
   }
@@ -1570,6 +1753,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -1600,6 +1787,11 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return postBusLineFailure(this);
   }
@@ -1623,6 +1815,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return postBusLineFailure?.call(this);
   }
@@ -1646,6 +1842,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -1722,6 +1922,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return allTripsLoading();
   }
@@ -1748,6 +1952,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return allTripsLoading?.call();
   }
@@ -1773,6 +1981,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -1803,6 +2015,11 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return allTripsLoading(this);
   }
@@ -1826,6 +2043,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return allTripsLoading?.call(this);
   }
@@ -1849,6 +2070,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -1956,6 +2181,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return allTripsSuccess(allTripsResponseList);
   }
@@ -1982,6 +2211,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return allTripsSuccess?.call(allTripsResponseList);
   }
@@ -2007,6 +2240,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -2037,6 +2274,11 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return allTripsSuccess(this);
   }
@@ -2060,6 +2302,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return allTripsSuccess?.call(this);
   }
@@ -2083,6 +2329,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -2188,6 +2438,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return allTripsFailure(apiError);
   }
@@ -2214,6 +2468,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return allTripsFailure?.call(apiError);
   }
@@ -2239,6 +2497,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -2269,6 +2531,11 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return allTripsFailure(this);
   }
@@ -2292,6 +2559,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return allTripsFailure?.call(this);
   }
@@ -2315,6 +2586,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -2391,6 +2666,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return addTripsLoading();
   }
@@ -2417,6 +2696,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return addTripsLoading?.call();
   }
@@ -2442,6 +2725,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -2472,6 +2759,11 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return addTripsLoading(this);
   }
@@ -2495,6 +2787,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return addTripsLoading?.call(this);
   }
@@ -2518,6 +2814,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -2588,6 +2888,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return addTripsSuccess();
   }
@@ -2614,6 +2918,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return addTripsSuccess?.call();
   }
@@ -2639,6 +2947,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -2669,6 +2981,11 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return addTripsSuccess(this);
   }
@@ -2692,6 +3009,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return addTripsSuccess?.call(this);
   }
@@ -2715,6 +3036,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -2813,6 +3138,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return addTripsFailure(apiError);
   }
@@ -2839,6 +3168,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return addTripsFailure?.call(apiError);
   }
@@ -2864,6 +3197,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -2894,6 +3231,11 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return addTripsFailure(this);
   }
@@ -2917,6 +3259,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return addTripsFailure?.call(this);
   }
@@ -2940,6 +3286,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -3016,6 +3366,10 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return deleteTripsLoading();
   }
@@ -3042,6 +3396,10 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return deleteTripsLoading?.call();
   }
@@ -3067,6 +3425,10 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsLoading != null) {
@@ -3097,6 +3459,11 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return deleteTripsLoading(this);
   }
@@ -3120,6 +3487,10 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return deleteTripsLoading?.call(this);
   }
@@ -3143,6 +3514,10 @@ class _$DeleteTripsLoadingImpl implements DeleteTripsLoading {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsLoading != null) {
@@ -3213,6 +3588,10 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return deleteTripsSuccess();
   }
@@ -3239,6 +3618,10 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return deleteTripsSuccess?.call();
   }
@@ -3264,6 +3647,10 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsSuccess != null) {
@@ -3294,6 +3681,11 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return deleteTripsSuccess(this);
   }
@@ -3317,6 +3709,10 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return deleteTripsSuccess?.call(this);
   }
@@ -3340,6 +3736,10 @@ class _$DeleteTripsSuccessImpl implements DeleteTripsSuccess {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsSuccess != null) {
@@ -3438,6 +3838,10 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     required TResult Function() deleteTripsLoading,
     required TResult Function() deleteTripsSuccess,
     required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
   }) {
     return deleteTripsFailure(apiError);
   }
@@ -3464,6 +3868,10 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     TResult? Function()? deleteTripsLoading,
     TResult? Function()? deleteTripsSuccess,
     TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
   }) {
     return deleteTripsFailure?.call(apiError);
   }
@@ -3489,6 +3897,10 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     TResult Function()? deleteTripsLoading,
     TResult Function()? deleteTripsSuccess,
     TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsFailure != null) {
@@ -3519,6 +3931,11 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
     required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
     required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
   }) {
     return deleteTripsFailure(this);
   }
@@ -3542,6 +3959,10 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
   }) {
     return deleteTripsFailure?.call(this);
   }
@@ -3565,6 +3986,10 @@ class _$DeleteTripsFailureImpl implements DeleteTripsFailure {
     TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
     TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
     TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
     required TResult orElse(),
   }) {
     if (deleteTripsFailure != null) {
@@ -3582,4 +4007,929 @@ abstract class DeleteTripsFailure implements DriverHomeState {
   @JsonKey(ignore: true)
   _$$DeleteTripsFailureImplCopyWith<_$DeleteTripsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DriverBookLoadingImplCopyWith<$Res> {
+  factory _$$DriverBookLoadingImplCopyWith(_$DriverBookLoadingImpl value,
+          $Res Function(_$DriverBookLoadingImpl) then) =
+      __$$DriverBookLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DriverBookLoadingImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DriverBookLoadingImpl>
+    implements _$$DriverBookLoadingImplCopyWith<$Res> {
+  __$$DriverBookLoadingImplCopyWithImpl(_$DriverBookLoadingImpl _value,
+      $Res Function(_$DriverBookLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DriverBookLoadingImpl implements DriverBookLoading {
+  const _$DriverBookLoadingImpl();
+
+  @override
+  String toString() {
+    return 'DriverHomeState.driverBookLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DriverBookLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
+  }) {
+    return driverBookLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
+  }) {
+    return driverBookLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookLoading != null) {
+      return driverBookLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
+  }) {
+    return driverBookLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+  }) {
+    return driverBookLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookLoading != null) {
+      return driverBookLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DriverBookLoading implements DriverHomeState {
+  const factory DriverBookLoading() = _$DriverBookLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$DriverBookSuccessImplCopyWith<$Res> {
+  factory _$$DriverBookSuccessImplCopyWith(_$DriverBookSuccessImpl value,
+          $Res Function(_$DriverBookSuccessImpl) then) =
+      __$$DriverBookSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DriverBookSuccessImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DriverBookSuccessImpl>
+    implements _$$DriverBookSuccessImplCopyWith<$Res> {
+  __$$DriverBookSuccessImplCopyWithImpl(_$DriverBookSuccessImpl _value,
+      $Res Function(_$DriverBookSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DriverBookSuccessImpl implements DriverBookSuccess {
+  const _$DriverBookSuccessImpl();
+
+  @override
+  String toString() {
+    return 'DriverHomeState.driverBookSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DriverBookSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
+  }) {
+    return driverBookSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
+  }) {
+    return driverBookSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookSuccess != null) {
+      return driverBookSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
+  }) {
+    return driverBookSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+  }) {
+    return driverBookSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookSuccess != null) {
+      return driverBookSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DriverBookSuccess implements DriverHomeState {
+  const factory DriverBookSuccess() = _$DriverBookSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$DriverBookFailureImplCopyWith<$Res> {
+  factory _$$DriverBookFailureImplCopyWith(_$DriverBookFailureImpl value,
+          $Res Function(_$DriverBookFailureImpl) then) =
+      __$$DriverBookFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DioException apiError});
+}
+
+/// @nodoc
+class __$$DriverBookFailureImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DriverBookFailureImpl>
+    implements _$$DriverBookFailureImplCopyWith<$Res> {
+  __$$DriverBookFailureImplCopyWithImpl(_$DriverBookFailureImpl _value,
+      $Res Function(_$DriverBookFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiError = null,
+  }) {
+    return _then(_$DriverBookFailureImpl(
+      apiError: null == apiError
+          ? _value.apiError
+          : apiError // ignore: cast_nullable_to_non_nullable
+              as DioException,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DriverBookFailureImpl implements DriverBookFailure {
+  const _$DriverBookFailureImpl({required this.apiError});
+
+  @override
+  final DioException apiError;
+
+  @override
+  String toString() {
+    return 'DriverHomeState.driverBookFailure(apiError: $apiError)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DriverBookFailureImpl &&
+            (identical(other.apiError, apiError) ||
+                other.apiError == apiError));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiError);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DriverBookFailureImplCopyWith<_$DriverBookFailureImpl> get copyWith =>
+      __$$DriverBookFailureImplCopyWithImpl<_$DriverBookFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
+  }) {
+    return driverBookFailure(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
+  }) {
+    return driverBookFailure?.call(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookFailure != null) {
+      return driverBookFailure(apiError);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
+  }) {
+    return driverBookFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+  }) {
+    return driverBookFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverBookFailure != null) {
+      return driverBookFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DriverBookFailure implements DriverHomeState {
+  const factory DriverBookFailure({required final DioException apiError}) =
+      _$DriverBookFailureImpl;
+
+  DioException get apiError;
+  @JsonKey(ignore: true)
+  _$$DriverBookFailureImplCopyWith<_$DriverBookFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DriverSetLatLongLoadingImplCopyWith<$Res> {
+  factory _$$DriverSetLatLongLoadingImplCopyWith(
+          _$DriverSetLatLongLoadingImpl value,
+          $Res Function(_$DriverSetLatLongLoadingImpl) then) =
+      __$$DriverSetLatLongLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DriverSetLatLongLoadingImplCopyWithImpl<$Res>
+    extends _$DriverHomeStateCopyWithImpl<$Res, _$DriverSetLatLongLoadingImpl>
+    implements _$$DriverSetLatLongLoadingImplCopyWith<$Res> {
+  __$$DriverSetLatLongLoadingImplCopyWithImpl(
+      _$DriverSetLatLongLoadingImpl _value,
+      $Res Function(_$DriverSetLatLongLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DriverSetLatLongLoadingImpl implements DriverSetLatLongLoading {
+  const _$DriverSetLatLongLoadingImpl();
+
+  @override
+  String toString() {
+    return 'DriverHomeState.driverSetLatLongLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DriverSetLatLongLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() deleteTripsLoading,
+    required TResult Function() deleteTripsSuccess,
+    required TResult Function(DioException apiError) deleteTripsFailure,
+    required TResult Function() driverBookLoading,
+    required TResult Function() driverBookSuccess,
+    required TResult Function(DioException apiError) driverBookFailure,
+    required TResult Function() driverSetLatLongLoading,
+  }) {
+    return driverSetLatLongLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? deleteTripsLoading,
+    TResult? Function()? deleteTripsSuccess,
+    TResult? Function(DioException apiError)? deleteTripsFailure,
+    TResult? Function()? driverBookLoading,
+    TResult? Function()? driverBookSuccess,
+    TResult? Function(DioException apiError)? driverBookFailure,
+    TResult? Function()? driverSetLatLongLoading,
+  }) {
+    return driverSetLatLongLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? deleteTripsLoading,
+    TResult Function()? deleteTripsSuccess,
+    TResult Function(DioException apiError)? deleteTripsFailure,
+    TResult Function()? driverBookLoading,
+    TResult Function()? driverBookSuccess,
+    TResult Function(DioException apiError)? driverBookFailure,
+    TResult Function()? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverSetLatLongLoading != null) {
+      return driverSetLatLongLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(DeleteTripsLoading value) deleteTripsLoading,
+    required TResult Function(DeleteTripsSuccess value) deleteTripsSuccess,
+    required TResult Function(DeleteTripsFailure value) deleteTripsFailure,
+    required TResult Function(DriverBookLoading value) driverBookLoading,
+    required TResult Function(DriverBookSuccess value) driverBookSuccess,
+    required TResult Function(DriverBookFailure value) driverBookFailure,
+    required TResult Function(DriverSetLatLongLoading value)
+        driverSetLatLongLoading,
+  }) {
+    return driverSetLatLongLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult? Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult? Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult? Function(DriverBookLoading value)? driverBookLoading,
+    TResult? Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult? Function(DriverBookFailure value)? driverBookFailure,
+    TResult? Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+  }) {
+    return driverSetLatLongLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(DeleteTripsLoading value)? deleteTripsLoading,
+    TResult Function(DeleteTripsSuccess value)? deleteTripsSuccess,
+    TResult Function(DeleteTripsFailure value)? deleteTripsFailure,
+    TResult Function(DriverBookLoading value)? driverBookLoading,
+    TResult Function(DriverBookSuccess value)? driverBookSuccess,
+    TResult Function(DriverBookFailure value)? driverBookFailure,
+    TResult Function(DriverSetLatLongLoading value)? driverSetLatLongLoading,
+    required TResult orElse(),
+  }) {
+    if (driverSetLatLongLoading != null) {
+      return driverSetLatLongLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DriverSetLatLongLoading implements DriverHomeState {
+  const factory DriverSetLatLongLoading() = _$DriverSetLatLongLoadingImpl;
 }

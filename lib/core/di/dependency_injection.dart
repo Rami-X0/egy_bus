@@ -36,7 +36,7 @@ void setupGetIt() async {
       .registerLazySingleton<DriverLoginCubit>(() => DriverLoginCubit(getIt()));
 
   //Todo: driverHome
-  getIt.registerLazySingleton<DriverHomeCubit>(() => DriverHomeCubit(getIt()));
+  getIt.registerLazySingleton<DriverHomeCubit>(() => DriverHomeCubit(getIt(),getIt()));
   getIt.registerLazySingleton<DriverHomeRepo>(() => DriverHomeRepo(getIt()));
 
   //Todo: passengerLogin

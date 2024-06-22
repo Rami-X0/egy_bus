@@ -9,6 +9,9 @@ import 'package:egy_bus/features/driver_login/data/models/driver_login_response.
 import 'package:egy_bus/features/driver_sign_up/data/models/driver_sign_up_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_request.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_response.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_payment_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_profile_reponse.dart';
 import 'package:egy_bus/features/passenger_login/data/models/passenger_login_request.dart';
 import 'package:egy_bus/features/passenger_login/data/models/passenger_login_response.dart';
@@ -62,4 +65,9 @@ abstract class ApiServices {
 
   @DELETE('${ApiConstants.deleteTrip}/{id}')
   Future deleteTrip(@Path('id') int id);
+
+  @POST(ApiConstants.passengerPayment)
+  Future passengerPayment(@Body() PassengerPaymentRequest body);
+@POST(ApiConstants.passengerBookTrip)
+  Future<PassengerBookTripResponse> passengerBooKTrip(@Body() PassengerBookTripRequest body);
 }

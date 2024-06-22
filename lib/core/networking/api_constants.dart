@@ -17,5 +17,7 @@ class ApiConstants {
   static const String passengerAddBookZone = "/api/Booking/CanBookInZone";
   static const String passengerProfileData = "/api/Passenger";
   static const String passengerStation = "/api/Station";
+  static const String passengerPayment = "/api/Payment";
+  static const String passengerBookTrip = "/api/Booking/BookTrip";
 
 }

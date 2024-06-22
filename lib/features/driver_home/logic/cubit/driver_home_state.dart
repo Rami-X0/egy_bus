@@ -46,4 +46,16 @@ class DriverHomeState with _$DriverHomeState {
 
   const factory DriverHomeState.deleteTripsFailure(
       {required DioException apiError}) = DeleteTripsFailure;
+
+ const factory DriverHomeState.driverBookLoading() = DriverBookLoading;
+
+  const factory DriverHomeState.driverBookSuccess(
+) = DriverBookSuccess;
+
+  const factory DriverHomeState.driverBookFailure(
+      {required DioException apiError}) = DriverBookFailure;
+  const factory DriverHomeState.driverSetLatLongLoading(
+      ) = DriverSetLatLongLoading;
+
+
 }

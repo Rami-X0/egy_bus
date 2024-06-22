@@ -24,6 +24,10 @@ void main() async{
   stationLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. stationLat );
   stationLong=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. stationLong );
   passengerName=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. passengerName );
+  driverLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverLat );
+  driverLon=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverLon);
+  driverStationLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverStationLat);
+  driverStationLon=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverStationLon);
   await ScreenUtil.ensureScreenSize();
   runApp(const EgyBus());
 }

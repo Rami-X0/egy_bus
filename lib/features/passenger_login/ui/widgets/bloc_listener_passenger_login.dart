@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:egy_bus/core/di/dependency_injection.dart';
 import 'package:egy_bus/core/helper/extension.dart';
-import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_blur_dialog.dart';
@@ -38,18 +37,14 @@ class BlocListenerPassengerLogin extends StatelessWidget {
             );
           },
           signUpSuccess: (data) {
-            context
-                .read<PassengerHomeCubit>()
-                .emitPassengerStationLink()
-                .then((value) {
-              showModalBottomSheet(
-                  useRootNavigator: true,
-                  isScrollControlled: true,
-                  context: context,
-                  builder: (context) {
-                    return _buildBottomSheetStationLink(context);
-                  });
-            });
+          context.pop();
+            showModalBottomSheet(
+                useRootNavigator: true,
+                isScrollControlled: true,
+                context: context,
+                builder: (context) {
+                  return _buildBottomSheetStationLink(context);
+                });
           },
           signUpFailure: (failure) {
             context.pop();
@@ -61,9 +56,9 @@ class BlocListenerPassengerLogin extends StatelessWidget {
     );
   }
 }
+
 Widget _buildBottomSheetStationLink(BuildContext context) {
   context.read<PassengerHomeCubit>().getPermissionLocation(context);
-
   context.read<PassengerHomeCubit>().emitBusLineResponse();
   return BlocProvider.value(
     value: getIt<PassengerHomeCubit>(),
@@ -72,13 +67,12 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
         child: Container(
           height: 700.h,
           alignment: Alignment.topCenter,
-
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
                 padding:
-                EdgeInsets.symmetric(horizontal: 150.w, vertical: 10.h),
+                    EdgeInsets.symmetric(horizontal: 150.w, vertical: 10.h),
                 child: Container(
                   alignment: Alignment.topCenter,
                   height: 5.0,
@@ -93,7 +87,7 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
               Expanded(
                 child: BlocBuilder<PassengerHomeCubit, PassengerHomeState>(
                   buildWhen: (previous, current) =>
-                  current is GetStationLineLoading ||
+                      current is GetStationLineLoading ||
                       current is GetBusLineSuccess ||
                       current is GetStationLineFailure,
                   builder: (context, state) {
@@ -132,24 +126,18 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
                                   builder: (context, state) {
                                     return AppTextButton(
                                       onPressed: () {
-                                        // context
-                                        //     .read<PassengerHomeCubit>()
-                                        //     .emitAddBook(0)
-                                        //     .then((onValue) {
-                                        context.pushNamedAndRemoveUntil(
-                                            Routes.passengerHome);
-                                        // });
+                                        context
+                                            .read<PassengerHomeCubit>()
+                                            .emitAddBook(0,context);
                                       },
                                       text: state is AddBookLoading
                                           ? 'Wait...'
                                           : 'Confirm',
-                                      textStyle: TextStyles
-                                          .font28WhiteSemiBold
+                                      textStyle: TextStyles.font28WhiteSemiBold
                                           .copyWith(
                                         fontSize: 15.sp,
                                       ),
-                                      backGroundColor:
-                                           ColorsManager.mainColor,
+                                      backGroundColor: ColorsManager.mainColor,
                                       verticalSize: 55,
                                       border: 5,
                                     );
@@ -174,6 +162,7 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
         )),
   );
 }
+
 void setupErrorState(BuildContext context, String failure) {
   showDialog(
     context: context,

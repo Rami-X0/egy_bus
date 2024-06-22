@@ -51,8 +51,15 @@ class DriverHomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        actions: const [
+        actions: [
           AddTripButton(),
+          IconButton(
+            onPressed: () {
+              context.read<DriverHomeCubit>().emitAllTrip();
+            },
+            icon: Icon(Icons.refresh),
+            color: ColorsManager.mainColor,
+          ),
         ],
       ),
       body: SafeArea(
@@ -80,181 +87,190 @@ class DriverHomeScreen extends StatelessWidget {
                       separatorBuilder: (context, index) => Gap(15.h),
                       itemCount: data.length,
                       itemBuilder: (context, index) {
-                        return Container(
-                          padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          height: 245.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(color: Colors.grey)),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 15.w),
-                                child: Stack(
+                        return Visibility(
+                          visible:
+                              data[index].availableSeats == 0 ? false : true,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 15.w),
+                            height: 245.h,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                border: Border.all(color: Colors.grey)),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 15.w),
+                                  child: Stack(
+                                    children: [
+                                      Text(
+                                        'Station Link ',
+                                        style: TextStyles.font15DarkBlueMedium
+                                            .copyWith(
+                                          fontSize: 20.sp,
+                                          foreground: Paint()
+                                            ..style = PaintingStyle.stroke
+                                            ..strokeWidth = 2.8
+                                            ..color = Colors.black,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Station Link ',
+                                        style: TextStyles.font15DarkBlueMedium
+                                            .copyWith(
+                                          fontSize: 20.sp,
+                                          color: ColorsManager.mainColor,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Row(
                                   children: [
-                                    Text(
-                                      'Station Link ',
-                                      style: TextStyles.font15DarkBlueMedium
-                                          .copyWith(
-                                        fontSize: 20.sp,
-                                        foreground: Paint()
-                                          ..style = PaintingStyle.stroke
-                                          ..strokeWidth = 2.8
-                                          ..color = Colors.black,
+                                    Expanded(
+                                      child: Text(
+                                        data[index].fromStationName,
+                                        style: TextStyles.font15DarkBlueMedium
+                                            .copyWith(
+                                                color: const Color(0xff003D48)),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
-                                    Text(
-                                      'Station Link ',
-                                      style: TextStyles.font15DarkBlueMedium
-                                          .copyWith(
-                                        fontSize: 20.sp,
-                                        color: ColorsManager.mainColor,
+                                    const Spacer(),
+                                    Expanded(
+                                      child: Text(
+                                        data[index].toStationName,
+                                        style: TextStyles.font15DarkBlueMedium
+                                            .copyWith(
+                                                color: const Color(0xff003D48)),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
                                   ],
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  Expanded(
-                                    child: Text(
-                                      data[index].fromStationName,
-                                      style: TextStyles.font15DarkBlueMedium
-                                          .copyWith(
-                                              color: const Color(0xff003D48)),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
+                                Gap(10.h),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 10.w),
+                                  child: Row(
+                                    children: [
+                                      const Text(
+                                        'Status',
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                      Gap(5.w),
+                                      CircleAvatar(
+                                        maxRadius: 7.w,
+                                        backgroundColor: Colors.grey,
+                                        child: CircleAvatar(
+                                          backgroundColor: Colors.greenAccent,
+                                          maxRadius: 5.w,
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      const Text(
+                                        'Available State',
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    ],
                                   ),
-                                  const Spacer(),
-                                  Expanded(
-                                    child: Text(
-                                      data[index].toStationName,
-                                      style: TextStyles.font15DarkBlueMedium
-                                          .copyWith(
-                                              color: const Color(0xff003D48)),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
+                                ),
+                                Gap(10.h),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 10.w),
+                                  child: Row(
+                                    children: [
+                                      const Text(
+                                        'Live now',
+                                        style:
+                                            TextStyle(color: Color(0xff666666)),
+                                      ),
+                                      const Spacer(),
+                                      Text(
+                                          data[index].availableSeats.toString())
+                                    ],
                                   ),
-                                ],
-                              ),
-                              Gap(10.h),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                child: Row(
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text(
-                                      'Status',
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                    Gap(5.w),
                                     CircleAvatar(
                                       maxRadius: 7.w,
-                                      backgroundColor: Colors.grey,
+                                      backgroundColor: const Color(0xffB0E6F0),
                                       child: CircleAvatar(
-                                        backgroundColor: Colors.greenAccent,
+                                        backgroundColor:
+                                            const Color(0xff00ADCF),
                                         maxRadius: 5.w,
                                       ),
                                     ),
-                                    const Spacer(),
-                                    const Text(
-                                      'Available State',
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Gap(10.h),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                                child: Row(
-                                  children: [
-                                    const Text(
-                                      'Live now',
-                                      style:
-                                          TextStyle(color: Color(0xff666666)),
-                                    ),
-                                    const Spacer(),
-                                    Text(data[index].availableSeats.toString())
-                                  ],
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  CircleAvatar(
-                                    maxRadius: 7.w,
-                                    backgroundColor: const Color(0xffB0E6F0),
-                                    child: CircleAvatar(
-                                      backgroundColor: const Color(0xff00ADCF),
-                                      maxRadius: 5.w,
-                                    ),
-                                  ),
-                                  Row(
-                                    children: List.generate(
-                                      12,
-                                      (index) => Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 5.0),
-                                        child: Container(
-                                          color: Colors.blue,
-                                          height: 2,
-                                          width: 5,
+                                    Row(
+                                      children: List.generate(
+                                        12,
+                                        (index) => Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 5.0),
+                                          child: Container(
+                                            color: Colors.blue,
+                                            height: 2,
+                                            width: 5,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  const Icon(
-                                    Icons.train,
-                                    color: Colors.blue,
-                                  ),
-                                  Row(
-                                    children: List.generate(
-                                      12,
-                                      (index) => Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 5.0),
-                                        child: Container(
-                                          color: Colors.blue,
-                                          height: 2,
-                                          width: 5,
+                                    const Icon(
+                                      Icons.train,
+                                      color: Colors.blue,
+                                    ),
+                                    Row(
+                                      children: List.generate(
+                                        12,
+                                        (index) => Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 5.0),
+                                          child: Container(
+                                            color: Colors.blue,
+                                            height: 2,
+                                            width: 5,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  CircleAvatar(
-                                    maxRadius: 7.w,
-                                    backgroundColor: const Color(0xffB0E6F0),
-                                    child: CircleAvatar(
-                                      backgroundColor: const Color(0xffE6F7FA),
-                                      maxRadius: 5.w,
+                                    CircleAvatar(
+                                      maxRadius: 7.w,
+                                      backgroundColor: const Color(0xffB0E6F0),
+                                      child: CircleAvatar(
+                                        backgroundColor:
+                                            const Color(0xffE6F7FA),
+                                        maxRadius: 5.w,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              Text(data[index].busPlate),
-                              Align(
-                                alignment: Alignment.bottomLeft,
-                                child: AppTextButton(
-                                  onPressed: () {
-                                    context
-                                        .read<DriverHomeCubit>()
-                                        .emitDeleteTrip(data[index].id);
-
-                                  },
-                                  border: 5,
-                                  verticalSize: 30,
-                                  horizontalSize: 100,
-                                  text: "cancel",
-                                  textStyle: TextStyles.font11BlackMedium
-                                      .copyWith(
-                                          color: ColorsManager.white,
-                                          fontSize: 15.sp),
+                                  ],
                                 ),
-                              )
-                            ],
+                                Text(data[index].busPlate),
+                                Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: AppTextButton(
+                                    onPressed: () {
+                                      context
+                                          .read<DriverHomeCubit>()
+                                          .emitDeleteTrip(data[index].id);
+                                    },
+                                    border: 5,
+                                    verticalSize: 30,
+                                    horizontalSize: 100,
+                                    text: "cancel",
+                                    textStyle: TextStyles.font11BlackMedium
+                                        .copyWith(
+                                            color: ColorsManager.white,
+                                            fontSize: 15.sp),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         );
                       },

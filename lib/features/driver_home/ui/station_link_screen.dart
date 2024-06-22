@@ -1,8 +1,6 @@
 import 'package:egy_bus/core/caching/app_shared_pref.dart';
 import 'package:egy_bus/core/caching/app_shared_pref_key.dart';
 import 'package:egy_bus/core/di/dependency_injection.dart';
-import 'package:egy_bus/core/helper/extension.dart';
-import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_loading.dart';
@@ -11,6 +9,7 @@ import 'package:egy_bus/core/widgets/app_text_form_field.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_station_link_response.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_cubit.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_state.dart';
+import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,6 +27,13 @@ bool isStationLikColorFailureIcon = false;
 bool _isButtonActive = false;
 
 class _DriverStationLinkScreenState extends State<DriverStationLinkScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    context.read<DriverHomeCubit>().getPermissionLocation(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,8 +168,6 @@ class _DriverStationLinkScreenState extends State<DriverStationLinkScreen> {
       child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Container(
-            // constraints: BoxConstraints(
-            //     maxHeight: MediaQuery.of(context).size.height * 0.8),
             height: 700.h,
             alignment: Alignment.topCenter,
             child: Column(
@@ -188,6 +192,9 @@ class _DriverStationLinkScreenState extends State<DriverStationLinkScreen> {
                     builder: (context, state) {
                       return state.maybeWhen(
                           orElse: () => Container(),
+                          driverBookLoading: () {
+                            return const AppLoading();
+                          },
                           getStationLineLoading: () {
                             return const AppLoading();
                           },
@@ -220,7 +227,8 @@ class _DriverStationLinkScreenState extends State<DriverStationLinkScreen> {
                                     onPressed: _isButtonActive
                                         ? () {
                                             context
-                                                .pushNamed(Routes.driverHome);
+                                                .read<DriverHomeCubit>()
+                                                .emitAddBook(0, context);
                                           }
                                         : null,
                                     text: state is PostBusLineLoading
@@ -288,6 +296,13 @@ class _RadioListState extends State<RadioList> {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<DriverHomeCubit>();
+    if (driverLat == null || driverLon == null) {
+      setState(() {
+        cubit.stationLon = widget.data[1].stationLong;
+        cubit.stationLa = widget.data[1].stationLat;
+      });
+    }
+    final cubitPass = context.read<PassengerHomeCubit>();
     return Expanded(
       flex: 1,
       child: ListView.separated(

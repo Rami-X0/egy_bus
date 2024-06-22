@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_station_link_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_profile_reponse.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -61,6 +62,15 @@ class PassengerHomeState with _$PassengerHomeState {
   const factory PassengerHomeState.passengerProfileLoading() =
       PassengerProfileLoading;
 
+  const factory PassengerHomeState.passengerPaymentLoading() =
+      PassengerPaymentLoading;
+
+  const factory PassengerHomeState.passengerPaymentSuccess() =
+      PassengerPaymentSuccess;
+
+  const factory PassengerHomeState.passengerPaymentFailure(
+      {required DioException apiError}) = PassengerPaymentFailure;
+
   const factory PassengerHomeState.passengerProfileSuccess(
       {required PassengerProfileResponse data}) = PassengerProfileSuccess;
 
@@ -69,4 +79,18 @@ class PassengerHomeState with _$PassengerHomeState {
 
   const factory PassengerHomeState.passengerGoingToHome() =
       PassengerGoingToHome;
+
+  const factory PassengerHomeState.passengerBooKTripSuccess({
+    required PassengerBookTripResponse response
+}) =
+      PassengerBooKTripSuccess;
+
+  const factory PassengerHomeState.passengerBooKTripLoading({
+    required int index
+}) =
+      PassengerBooKTripLoading;
+
+  const factory PassengerHomeState.passengerBooKTripFailure({
+    required DioException failure,
+  }) = PassengerBooKTripFailure;
 }

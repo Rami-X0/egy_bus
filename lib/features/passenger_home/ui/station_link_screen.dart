@@ -1,26 +1,12 @@
 import 'package:egy_bus/core/caching/app_shared_pref.dart';
 import 'package:egy_bus/core/caching/app_shared_pref_key.dart';
-import 'package:egy_bus/core/di/dependency_injection.dart';
-import 'package:egy_bus/core/helper/extension.dart';
-import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
-import 'package:egy_bus/core/widgets/app_loading.dart';
-import 'package:egy_bus/core/widgets/app_text_button.dart';
-import 'package:egy_bus/core/widgets/app_text_form_field.dart';
-import 'package:egy_bus/features/driver_home/data/models/driver_station_link_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_cubit.dart';
-import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gap/gap.dart';
-
-
-
-
-
 
 class RadioList extends StatefulWidget {
   final List<BusLineResponse> data;
