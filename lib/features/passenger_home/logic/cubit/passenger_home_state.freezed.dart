@@ -37,7 +37,7 @@ mixin _$PassengerHomeState {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -52,6 +52,10 @@ mixin _$PassengerHomeState {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,7 +79,7 @@ mixin _$PassengerHomeState {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -89,6 +93,10 @@ mixin _$PassengerHomeState {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,7 +119,7 @@ mixin _$PassengerHomeState {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -125,6 +133,9 @@ mixin _$PassengerHomeState {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,6 +182,12 @@ mixin _$PassengerHomeState {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -204,6 +221,9 @@ mixin _$PassengerHomeState {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -237,6 +257,9 @@ mixin _$PassengerHomeState {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -317,7 +340,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -332,6 +355,10 @@ class _$InitialImpl implements _Initial {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return initial();
   }
@@ -358,7 +385,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -372,6 +399,10 @@ class _$InitialImpl implements _Initial {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return initial?.call();
   }
@@ -397,7 +428,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -411,6 +442,9 @@ class _$InitialImpl implements _Initial {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -463,6 +497,12 @@ class _$InitialImpl implements _Initial {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return initial(this);
   }
@@ -499,6 +539,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return initial?.call(this);
   }
@@ -535,6 +578,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -610,7 +656,7 @@ class _$GetStationPassengerLineLoadingImpl
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -625,6 +671,10 @@ class _$GetStationPassengerLineLoadingImpl
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return getStationPassengerLineLoading();
   }
@@ -651,7 +701,7 @@ class _$GetStationPassengerLineLoadingImpl
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -665,6 +715,10 @@ class _$GetStationPassengerLineLoadingImpl
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return getStationPassengerLineLoading?.call();
   }
@@ -690,7 +744,7 @@ class _$GetStationPassengerLineLoadingImpl
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -704,6 +758,9 @@ class _$GetStationPassengerLineLoadingImpl
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationPassengerLineLoading != null) {
@@ -756,6 +813,12 @@ class _$GetStationPassengerLineLoadingImpl
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return getStationPassengerLineLoading(this);
   }
@@ -792,6 +855,9 @@ class _$GetStationPassengerLineLoadingImpl
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return getStationPassengerLineLoading?.call(this);
   }
@@ -828,6 +894,9 @@ class _$GetStationPassengerLineLoadingImpl
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationPassengerLineLoading != null) {
@@ -938,7 +1007,7 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -953,6 +1022,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return getStationLineSuccess(driverStationLinkResponse);
   }
@@ -979,7 +1052,7 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -993,6 +1066,10 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return getStationLineSuccess?.call(driverStationLinkResponse);
   }
@@ -1018,7 +1095,7 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -1032,6 +1109,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -1084,6 +1164,12 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return getStationLineSuccess(this);
   }
@@ -1120,6 +1206,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return getStationLineSuccess?.call(this);
   }
@@ -1156,6 +1245,9 @@ class _$GetStationLineSuccessImpl implements GetStationLineSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineSuccess != null) {
@@ -1235,7 +1327,7 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -1250,6 +1342,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return getStationLineLoading();
   }
@@ -1276,7 +1372,7 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -1290,6 +1386,10 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return getStationLineLoading?.call();
   }
@@ -1315,7 +1415,7 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -1329,6 +1429,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -1381,6 +1484,12 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return getStationLineLoading(this);
   }
@@ -1417,6 +1526,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return getStationLineLoading?.call(this);
   }
@@ -1453,6 +1565,9 @@ class _$GetStationLineLoadingImpl implements GetStationLineLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineLoading != null) {
@@ -1560,7 +1675,7 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -1575,6 +1690,10 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return getBusLineSuccess(driverStationLinkResponse);
   }
@@ -1601,7 +1720,7 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -1615,6 +1734,10 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return getBusLineSuccess?.call(driverStationLinkResponse);
   }
@@ -1640,7 +1763,7 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -1654,6 +1777,9 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getBusLineSuccess != null) {
@@ -1706,6 +1832,12 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return getBusLineSuccess(this);
   }
@@ -1742,6 +1874,9 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return getBusLineSuccess?.call(this);
   }
@@ -1778,6 +1913,9 @@ class _$GetBusLineSuccessImpl implements GetBusLineSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getBusLineSuccess != null) {
@@ -1884,7 +2022,7 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -1899,6 +2037,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return getStationLineFailure(apiError);
   }
@@ -1925,7 +2067,7 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -1939,6 +2081,10 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return getStationLineFailure?.call(apiError);
   }
@@ -1964,7 +2110,7 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -1978,6 +2124,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -2030,6 +2179,12 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return getStationLineFailure(this);
   }
@@ -2066,6 +2221,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return getStationLineFailure?.call(this);
   }
@@ -2102,6 +2260,9 @@ class _$GetStationLineFailureImpl implements GetStationLineFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (getStationLineFailure != null) {
@@ -2178,7 +2339,7 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -2193,6 +2354,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return postBusLineLoading();
   }
@@ -2219,7 +2384,7 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -2233,6 +2398,10 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return postBusLineLoading?.call();
   }
@@ -2258,7 +2427,7 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -2272,6 +2441,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -2324,6 +2496,12 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return postBusLineLoading(this);
   }
@@ -2360,6 +2538,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return postBusLineLoading?.call(this);
   }
@@ -2396,6 +2577,9 @@ class _$PostBusLineLoadingImpl implements PostBusLineLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineLoading != null) {
@@ -2466,7 +2650,7 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -2481,6 +2665,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return postBusLineSuccess();
   }
@@ -2507,7 +2695,7 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -2521,6 +2709,10 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return postBusLineSuccess?.call();
   }
@@ -2546,7 +2738,7 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -2560,6 +2752,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -2612,6 +2807,12 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return postBusLineSuccess(this);
   }
@@ -2648,6 +2849,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return postBusLineSuccess?.call(this);
   }
@@ -2684,6 +2888,9 @@ class _$PostBusLineSuccessImpl implements PostBusLineSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineSuccess != null) {
@@ -2782,7 +2989,7 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -2797,6 +3004,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return postBusLineFailure(apiError);
   }
@@ -2823,7 +3034,7 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -2837,6 +3048,10 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return postBusLineFailure?.call(apiError);
   }
@@ -2862,7 +3077,7 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -2876,6 +3091,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -2928,6 +3146,12 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return postBusLineFailure(this);
   }
@@ -2964,6 +3188,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return postBusLineFailure?.call(this);
   }
@@ -3000,6 +3227,9 @@ class _$PostBusLineFailureImpl implements PostBusLineFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (postBusLineFailure != null) {
@@ -3076,7 +3306,7 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -3091,6 +3321,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return allTripsLoading();
   }
@@ -3117,7 +3351,7 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -3131,6 +3365,10 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return allTripsLoading?.call();
   }
@@ -3156,7 +3394,7 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -3170,6 +3408,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -3222,6 +3463,12 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return allTripsLoading(this);
   }
@@ -3258,6 +3505,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return allTripsLoading?.call(this);
   }
@@ -3294,6 +3544,9 @@ class _$AllTripsLoadingImpl implements AllTripsLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsLoading != null) {
@@ -3401,7 +3654,7 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -3416,6 +3669,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return allTripsSuccess(allTripsResponseList);
   }
@@ -3442,7 +3699,7 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -3456,6 +3713,10 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return allTripsSuccess?.call(allTripsResponseList);
   }
@@ -3481,7 +3742,7 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -3495,6 +3756,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -3547,6 +3811,12 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return allTripsSuccess(this);
   }
@@ -3583,6 +3853,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return allTripsSuccess?.call(this);
   }
@@ -3619,6 +3892,9 @@ class _$AllTripsSuccessImpl implements AllTripsSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsSuccess != null) {
@@ -3724,7 +4000,7 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -3739,6 +4015,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return allTripsFailure(apiError);
   }
@@ -3765,7 +4045,7 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -3779,6 +4059,10 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return allTripsFailure?.call(apiError);
   }
@@ -3804,7 +4088,7 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -3818,6 +4102,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -3870,6 +4157,12 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return allTripsFailure(this);
   }
@@ -3906,6 +4199,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return allTripsFailure?.call(this);
   }
@@ -3942,6 +4238,9 @@ class _$AllTripsFailureImpl implements AllTripsFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (allTripsFailure != null) {
@@ -4018,7 +4317,7 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -4033,6 +4332,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return addTripsLoading();
   }
@@ -4059,7 +4362,7 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -4073,6 +4376,10 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return addTripsLoading?.call();
   }
@@ -4098,7 +4405,7 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -4112,6 +4419,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -4164,6 +4474,12 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addTripsLoading(this);
   }
@@ -4200,6 +4516,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addTripsLoading?.call(this);
   }
@@ -4236,6 +4555,9 @@ class _$AddTripsLoadingImpl implements AddTripsLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsLoading != null) {
@@ -4306,7 +4628,7 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -4321,6 +4643,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return addTripsSuccess();
   }
@@ -4347,7 +4673,7 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -4361,6 +4687,10 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return addTripsSuccess?.call();
   }
@@ -4386,7 +4716,7 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -4400,6 +4730,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -4452,6 +4785,12 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addTripsSuccess(this);
   }
@@ -4488,6 +4827,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addTripsSuccess?.call(this);
   }
@@ -4524,6 +4866,9 @@ class _$AddTripsSuccessImpl implements AddTripsSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsSuccess != null) {
@@ -4622,7 +4967,7 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -4637,6 +4982,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return addTripsFailure(apiError);
   }
@@ -4663,7 +5012,7 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -4677,6 +5026,10 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return addTripsFailure?.call(apiError);
   }
@@ -4702,7 +5055,7 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -4716,6 +5069,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -4768,6 +5124,12 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addTripsFailure(this);
   }
@@ -4804,6 +5166,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addTripsFailure?.call(this);
   }
@@ -4840,6 +5205,9 @@ class _$AddTripsFailureImpl implements AddTripsFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addTripsFailure != null) {
@@ -4864,8 +5232,6 @@ abstract class _$$AddBookLoadingImplCopyWith<$Res> {
   factory _$$AddBookLoadingImplCopyWith(_$AddBookLoadingImpl value,
           $Res Function(_$AddBookLoadingImpl) then) =
       __$$AddBookLoadingImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int index});
 }
 
 /// @nodoc
@@ -4875,51 +5241,26 @@ class __$$AddBookLoadingImplCopyWithImpl<$Res>
   __$$AddBookLoadingImplCopyWithImpl(
       _$AddBookLoadingImpl _value, $Res Function(_$AddBookLoadingImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-  }) {
-    return _then(_$AddBookLoadingImpl(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$AddBookLoadingImpl implements AddBookLoading {
-  const _$AddBookLoadingImpl({required this.index});
-
-  @override
-  final int index;
+  const _$AddBookLoadingImpl();
 
   @override
   String toString() {
-    return 'PassengerHomeState.addBookLoading(index: $index)';
+    return 'PassengerHomeState.addBookLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AddBookLoadingImpl &&
-            (identical(other.index, index) || other.index == index));
+        (other.runtimeType == runtimeType && other is _$AddBookLoadingImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, index);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AddBookLoadingImplCopyWith<_$AddBookLoadingImpl> get copyWith =>
-      __$$AddBookLoadingImplCopyWithImpl<_$AddBookLoadingImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -4943,7 +5284,7 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -4958,8 +5299,12 @@ class _$AddBookLoadingImpl implements AddBookLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
-    return addBookLoading(index);
+    return addBookLoading();
   }
 
   @override
@@ -4984,7 +5329,7 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -4998,8 +5343,12 @@ class _$AddBookLoadingImpl implements AddBookLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
-    return addBookLoading?.call(index);
+    return addBookLoading?.call();
   }
 
   @override
@@ -5023,7 +5372,7 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -5037,10 +5386,13 @@ class _$AddBookLoadingImpl implements AddBookLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookLoading != null) {
-      return addBookLoading(index);
+      return addBookLoading();
     }
     return orElse();
   }
@@ -5089,6 +5441,12 @@ class _$AddBookLoadingImpl implements AddBookLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addBookLoading(this);
   }
@@ -5125,6 +5483,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addBookLoading?.call(this);
   }
@@ -5161,6 +5522,9 @@ class _$AddBookLoadingImpl implements AddBookLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookLoading != null) {
@@ -5171,13 +5535,7 @@ class _$AddBookLoadingImpl implements AddBookLoading {
 }
 
 abstract class AddBookLoading implements PassengerHomeState {
-  const factory AddBookLoading({required final int index}) =
-      _$AddBookLoadingImpl;
-
-  int get index;
-  @JsonKey(ignore: true)
-  _$$AddBookLoadingImplCopyWith<_$AddBookLoadingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory AddBookLoading() = _$AddBookLoadingImpl;
 }
 
 /// @nodoc
@@ -5237,7 +5595,7 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -5252,6 +5610,10 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return addBookSuccess();
   }
@@ -5278,7 +5640,7 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -5292,6 +5654,10 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return addBookSuccess?.call();
   }
@@ -5317,7 +5683,7 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -5331,6 +5697,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookSuccess != null) {
@@ -5383,6 +5752,12 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addBookSuccess(this);
   }
@@ -5419,6 +5794,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addBookSuccess?.call(this);
   }
@@ -5455,6 +5833,9 @@ class _$AddBookSuccessImpl implements AddBookSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookSuccess != null) {
@@ -5553,7 +5934,7 @@ class _$AddBookFailureImpl implements AddBookFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -5568,6 +5949,10 @@ class _$AddBookFailureImpl implements AddBookFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return addBookFailure(apiError);
   }
@@ -5594,7 +5979,7 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -5608,6 +5993,10 @@ class _$AddBookFailureImpl implements AddBookFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return addBookFailure?.call(apiError);
   }
@@ -5633,7 +6022,7 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -5647,6 +6036,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookFailure != null) {
@@ -5699,6 +6091,12 @@ class _$AddBookFailureImpl implements AddBookFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return addBookFailure(this);
   }
@@ -5735,6 +6133,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return addBookFailure?.call(this);
   }
@@ -5771,6 +6172,9 @@ class _$AddBookFailureImpl implements AddBookFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (addBookFailure != null) {
@@ -5851,7 +6255,7 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -5866,6 +6270,10 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerProfileLoading();
   }
@@ -5892,7 +6300,7 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -5906,6 +6314,10 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerProfileLoading?.call();
   }
@@ -5931,7 +6343,7 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -5945,6 +6357,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileLoading != null) {
@@ -5997,6 +6412,12 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerProfileLoading(this);
   }
@@ -6033,6 +6454,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerProfileLoading?.call(this);
   }
@@ -6069,6 +6493,9 @@ class _$PassengerProfileLoadingImpl implements PassengerProfileLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileLoading != null) {
@@ -6143,7 +6570,7 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -6158,6 +6585,10 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerPaymentLoading();
   }
@@ -6184,7 +6615,7 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -6198,6 +6629,10 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerPaymentLoading?.call();
   }
@@ -6223,7 +6658,7 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -6237,6 +6672,9 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentLoading != null) {
@@ -6289,6 +6727,12 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerPaymentLoading(this);
   }
@@ -6325,6 +6769,9 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerPaymentLoading?.call(this);
   }
@@ -6361,6 +6808,9 @@ class _$PassengerPaymentLoadingImpl implements PassengerPaymentLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentLoading != null) {
@@ -6435,7 +6885,7 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -6450,6 +6900,10 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerPaymentSuccess();
   }
@@ -6476,7 +6930,7 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -6490,6 +6944,10 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerPaymentSuccess?.call();
   }
@@ -6515,7 +6973,7 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -6529,6 +6987,9 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentSuccess != null) {
@@ -6581,6 +7042,12 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerPaymentSuccess(this);
   }
@@ -6617,6 +7084,9 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerPaymentSuccess?.call(this);
   }
@@ -6653,6 +7123,9 @@ class _$PassengerPaymentSuccessImpl implements PassengerPaymentSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentSuccess != null) {
@@ -6754,7 +7227,7 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -6769,6 +7242,10 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerPaymentFailure(apiError);
   }
@@ -6795,7 +7272,7 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -6809,6 +7286,10 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerPaymentFailure?.call(apiError);
   }
@@ -6834,7 +7315,7 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -6848,6 +7329,9 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentFailure != null) {
@@ -6900,6 +7384,12 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerPaymentFailure(this);
   }
@@ -6936,6 +7426,9 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerPaymentFailure?.call(this);
   }
@@ -6972,6 +7465,9 @@ class _$PassengerPaymentFailureImpl implements PassengerPaymentFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerPaymentFailure != null) {
@@ -7078,7 +7574,7 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -7093,6 +7589,10 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerProfileSuccess(data);
   }
@@ -7119,7 +7619,7 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -7133,6 +7633,10 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerProfileSuccess?.call(data);
   }
@@ -7158,7 +7662,7 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -7172,6 +7676,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileSuccess != null) {
@@ -7224,6 +7731,12 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerProfileSuccess(this);
   }
@@ -7260,6 +7773,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerProfileSuccess?.call(this);
   }
@@ -7296,6 +7812,9 @@ class _$PassengerProfileSuccessImpl implements PassengerProfileSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileSuccess != null) {
@@ -7404,7 +7923,7 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -7419,6 +7938,10 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerProfileFailure(apiError);
   }
@@ -7445,7 +7968,7 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -7459,6 +7982,10 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerProfileFailure?.call(apiError);
   }
@@ -7484,7 +8011,7 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -7498,6 +8025,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileFailure != null) {
@@ -7550,6 +8080,12 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerProfileFailure(this);
   }
@@ -7586,6 +8122,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerProfileFailure?.call(this);
   }
@@ -7622,6 +8161,9 @@ class _$PassengerProfileFailureImpl implements PassengerProfileFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerProfileFailure != null) {
@@ -7699,7 +8241,7 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -7714,6 +8256,10 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerGoingToHome();
   }
@@ -7740,7 +8286,7 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -7754,6 +8300,10 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerGoingToHome?.call();
   }
@@ -7779,7 +8329,7 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -7793,6 +8343,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerGoingToHome != null) {
@@ -7845,6 +8398,12 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerGoingToHome(this);
   }
@@ -7881,6 +8440,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerGoingToHome?.call(this);
   }
@@ -7917,6 +8479,9 @@ class _$PassengerGoingToHomeImpl implements PassengerGoingToHome {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerGoingToHome != null) {
@@ -8018,7 +8583,7 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -8033,6 +8598,10 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerBooKTripSuccess(response);
   }
@@ -8059,7 +8628,7 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -8073,6 +8642,10 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerBooKTripSuccess?.call(response);
   }
@@ -8098,7 +8671,7 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -8112,6 +8685,9 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripSuccess != null) {
@@ -8164,6 +8740,12 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerBooKTripSuccess(this);
   }
@@ -8200,6 +8782,9 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerBooKTripSuccess?.call(this);
   }
@@ -8236,6 +8821,9 @@ class _$PassengerBooKTripSuccessImpl implements PassengerBooKTripSuccess {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripSuccess != null) {
@@ -8343,7 +8931,7 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -8358,6 +8946,10 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerBooKTripLoading(index);
   }
@@ -8384,7 +8976,7 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -8398,6 +8990,10 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerBooKTripLoading?.call(index);
   }
@@ -8423,7 +9019,7 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -8437,6 +9033,9 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripLoading != null) {
@@ -8489,6 +9088,12 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerBooKTripLoading(this);
   }
@@ -8525,6 +9130,9 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerBooKTripLoading?.call(this);
   }
@@ -8561,6 +9169,9 @@ class _$PassengerBooKTripLoadingImpl implements PassengerBooKTripLoading {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripLoading != null) {
@@ -8667,7 +9278,7 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
     required TResult Function() addTripsLoading,
     required TResult Function() addTripsSuccess,
     required TResult Function(DioException apiError) addTripsFailure,
-    required TResult Function(int index) addBookLoading,
+    required TResult Function() addBookLoading,
     required TResult Function() addBookSuccess,
     required TResult Function(DioException apiError) addBookFailure,
     required TResult Function() passengerProfileLoading,
@@ -8682,6 +9293,10 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
         passengerBooKTripSuccess,
     required TResult Function(int index) passengerBooKTripLoading,
     required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
   }) {
     return passengerBooKTripFailure(failure);
   }
@@ -8708,7 +9323,7 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
     TResult? Function()? addTripsLoading,
     TResult? Function()? addTripsSuccess,
     TResult? Function(DioException apiError)? addTripsFailure,
-    TResult? Function(int index)? addBookLoading,
+    TResult? Function()? addBookLoading,
     TResult? Function()? addBookSuccess,
     TResult? Function(DioException apiError)? addBookFailure,
     TResult? Function()? passengerProfileLoading,
@@ -8722,6 +9337,10 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
         passengerBooKTripSuccess,
     TResult? Function(int index)? passengerBooKTripLoading,
     TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
   }) {
     return passengerBooKTripFailure?.call(failure);
   }
@@ -8747,7 +9366,7 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
     TResult Function()? addTripsLoading,
     TResult Function()? addTripsSuccess,
     TResult Function(DioException apiError)? addTripsFailure,
-    TResult Function(int index)? addBookLoading,
+    TResult Function()? addBookLoading,
     TResult Function()? addBookSuccess,
     TResult Function(DioException apiError)? addBookFailure,
     TResult Function()? passengerProfileLoading,
@@ -8761,6 +9380,9 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
         passengerBooKTripSuccess,
     TResult Function(int index)? passengerBooKTripLoading,
     TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripFailure != null) {
@@ -8813,6 +9435,12 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
         passengerBooKTripLoading,
     required TResult Function(PassengerBooKTripFailure value)
         passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
   }) {
     return passengerBooKTripFailure(this);
   }
@@ -8849,6 +9477,9 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
     TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
   }) {
     return passengerBooKTripFailure?.call(this);
   }
@@ -8885,6 +9516,9 @@ class _$PassengerBooKTripFailureImpl implements PassengerBooKTripFailure {
     TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
     TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
     TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
     required TResult orElse(),
   }) {
     if (passengerBooKTripFailure != null) {
@@ -8901,5 +9535,1024 @@ abstract class PassengerBooKTripFailure implements PassengerHomeState {
   DioException get failure;
   @JsonKey(ignore: true)
   _$$PassengerBooKTripFailureImplCopyWith<_$PassengerBooKTripFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PassengerAllBookLoadingImplCopyWith<$Res> {
+  factory _$$PassengerAllBookLoadingImplCopyWith(
+          _$PassengerAllBookLoadingImpl value,
+          $Res Function(_$PassengerAllBookLoadingImpl) then) =
+      __$$PassengerAllBookLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PassengerAllBookLoadingImplCopyWithImpl<$Res>
+    extends _$PassengerHomeStateCopyWithImpl<$Res,
+        _$PassengerAllBookLoadingImpl>
+    implements _$$PassengerAllBookLoadingImplCopyWith<$Res> {
+  __$$PassengerAllBookLoadingImplCopyWithImpl(
+      _$PassengerAllBookLoadingImpl _value,
+      $Res Function(_$PassengerAllBookLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$PassengerAllBookLoadingImpl implements PassengerAllBookLoading {
+  const _$PassengerAllBookLoadingImpl();
+
+  @override
+  String toString() {
+    return 'PassengerHomeState.passengerAllBookLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassengerAllBookLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationPassengerLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() addBookLoading,
+    required TResult Function() addBookSuccess,
+    required TResult Function(DioException apiError) addBookFailure,
+    required TResult Function() passengerProfileLoading,
+    required TResult Function() passengerPaymentLoading,
+    required TResult Function() passengerPaymentSuccess,
+    required TResult Function(DioException apiError) passengerPaymentFailure,
+    required TResult Function(PassengerProfileResponse data)
+        passengerProfileSuccess,
+    required TResult Function(DioException apiError) passengerProfileFailure,
+    required TResult Function() passengerGoingToHome,
+    required TResult Function(PassengerBookTripResponse response)
+        passengerBooKTripSuccess,
+    required TResult Function(int index) passengerBooKTripLoading,
+    required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
+  }) {
+    return passengerAllBookLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationPassengerLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? addBookLoading,
+    TResult? Function()? addBookSuccess,
+    TResult? Function(DioException apiError)? addBookFailure,
+    TResult? Function()? passengerProfileLoading,
+    TResult? Function()? passengerPaymentLoading,
+    TResult? Function()? passengerPaymentSuccess,
+    TResult? Function(DioException apiError)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult? Function(DioException apiError)? passengerProfileFailure,
+    TResult? Function()? passengerGoingToHome,
+    TResult? Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult? Function(int index)? passengerBooKTripLoading,
+    TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationPassengerLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? addBookLoading,
+    TResult Function()? addBookSuccess,
+    TResult Function(DioException apiError)? addBookFailure,
+    TResult Function()? passengerProfileLoading,
+    TResult Function()? passengerPaymentLoading,
+    TResult Function()? passengerPaymentSuccess,
+    TResult Function(DioException apiError)? passengerPaymentFailure,
+    TResult Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult Function(DioException apiError)? passengerProfileFailure,
+    TResult Function()? passengerGoingToHome,
+    TResult Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult Function(int index)? passengerBooKTripLoading,
+    TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookLoading != null) {
+      return passengerAllBookLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationPassengerLineLoading value)
+        getStationPassengerLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(AddBookLoading value) addBookLoading,
+    required TResult Function(AddBookSuccess value) addBookSuccess,
+    required TResult Function(AddBookFailure value) addBookFailure,
+    required TResult Function(PassengerProfileLoading value)
+        passengerProfileLoading,
+    required TResult Function(PassengerPaymentLoading value)
+        passengerPaymentLoading,
+    required TResult Function(PassengerPaymentSuccess value)
+        passengerPaymentSuccess,
+    required TResult Function(PassengerPaymentFailure value)
+        passengerPaymentFailure,
+    required TResult Function(PassengerProfileSuccess value)
+        passengerProfileSuccess,
+    required TResult Function(PassengerProfileFailure value)
+        passengerProfileFailure,
+    required TResult Function(PassengerGoingToHome value) passengerGoingToHome,
+    required TResult Function(PassengerBooKTripSuccess value)
+        passengerBooKTripSuccess,
+    required TResult Function(PassengerBooKTripLoading value)
+        passengerBooKTripLoading,
+    required TResult Function(PassengerBooKTripFailure value)
+        passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
+  }) {
+    return passengerAllBookLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(AddBookLoading value)? addBookLoading,
+    TResult? Function(AddBookSuccess value)? addBookSuccess,
+    TResult? Function(AddBookFailure value)? addBookFailure,
+    TResult? Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult? Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult? Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult? Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult? Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult? Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(AddBookLoading value)? addBookLoading,
+    TResult Function(AddBookSuccess value)? addBookSuccess,
+    TResult Function(AddBookFailure value)? addBookFailure,
+    TResult Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookLoading != null) {
+      return passengerAllBookLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PassengerAllBookLoading implements PassengerHomeState {
+  const factory PassengerAllBookLoading() = _$PassengerAllBookLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$PassengerAllBookSuccessImplCopyWith<$Res> {
+  factory _$$PassengerAllBookSuccessImplCopyWith(
+          _$PassengerAllBookSuccessImpl value,
+          $Res Function(_$PassengerAllBookSuccessImpl) then) =
+      __$$PassengerAllBookSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<PassengerBookResponse> data});
+}
+
+/// @nodoc
+class __$$PassengerAllBookSuccessImplCopyWithImpl<$Res>
+    extends _$PassengerHomeStateCopyWithImpl<$Res,
+        _$PassengerAllBookSuccessImpl>
+    implements _$$PassengerAllBookSuccessImplCopyWith<$Res> {
+  __$$PassengerAllBookSuccessImplCopyWithImpl(
+      _$PassengerAllBookSuccessImpl _value,
+      $Res Function(_$PassengerAllBookSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$PassengerAllBookSuccessImpl(
+      data: null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<PassengerBookResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PassengerAllBookSuccessImpl implements PassengerAllBookSuccess {
+  const _$PassengerAllBookSuccessImpl(
+      {required final List<PassengerBookResponse> data})
+      : _data = data;
+
+  final List<PassengerBookResponse> _data;
+  @override
+  List<PassengerBookResponse> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'PassengerHomeState.passengerAllBookSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassengerAllBookSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PassengerAllBookSuccessImplCopyWith<_$PassengerAllBookSuccessImpl>
+      get copyWith => __$$PassengerAllBookSuccessImplCopyWithImpl<
+          _$PassengerAllBookSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationPassengerLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() addBookLoading,
+    required TResult Function() addBookSuccess,
+    required TResult Function(DioException apiError) addBookFailure,
+    required TResult Function() passengerProfileLoading,
+    required TResult Function() passengerPaymentLoading,
+    required TResult Function() passengerPaymentSuccess,
+    required TResult Function(DioException apiError) passengerPaymentFailure,
+    required TResult Function(PassengerProfileResponse data)
+        passengerProfileSuccess,
+    required TResult Function(DioException apiError) passengerProfileFailure,
+    required TResult Function() passengerGoingToHome,
+    required TResult Function(PassengerBookTripResponse response)
+        passengerBooKTripSuccess,
+    required TResult Function(int index) passengerBooKTripLoading,
+    required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
+  }) {
+    return passengerAllBookSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationPassengerLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? addBookLoading,
+    TResult? Function()? addBookSuccess,
+    TResult? Function(DioException apiError)? addBookFailure,
+    TResult? Function()? passengerProfileLoading,
+    TResult? Function()? passengerPaymentLoading,
+    TResult? Function()? passengerPaymentSuccess,
+    TResult? Function(DioException apiError)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult? Function(DioException apiError)? passengerProfileFailure,
+    TResult? Function()? passengerGoingToHome,
+    TResult? Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult? Function(int index)? passengerBooKTripLoading,
+    TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationPassengerLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? addBookLoading,
+    TResult Function()? addBookSuccess,
+    TResult Function(DioException apiError)? addBookFailure,
+    TResult Function()? passengerProfileLoading,
+    TResult Function()? passengerPaymentLoading,
+    TResult Function()? passengerPaymentSuccess,
+    TResult Function(DioException apiError)? passengerPaymentFailure,
+    TResult Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult Function(DioException apiError)? passengerProfileFailure,
+    TResult Function()? passengerGoingToHome,
+    TResult Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult Function(int index)? passengerBooKTripLoading,
+    TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookSuccess != null) {
+      return passengerAllBookSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationPassengerLineLoading value)
+        getStationPassengerLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(AddBookLoading value) addBookLoading,
+    required TResult Function(AddBookSuccess value) addBookSuccess,
+    required TResult Function(AddBookFailure value) addBookFailure,
+    required TResult Function(PassengerProfileLoading value)
+        passengerProfileLoading,
+    required TResult Function(PassengerPaymentLoading value)
+        passengerPaymentLoading,
+    required TResult Function(PassengerPaymentSuccess value)
+        passengerPaymentSuccess,
+    required TResult Function(PassengerPaymentFailure value)
+        passengerPaymentFailure,
+    required TResult Function(PassengerProfileSuccess value)
+        passengerProfileSuccess,
+    required TResult Function(PassengerProfileFailure value)
+        passengerProfileFailure,
+    required TResult Function(PassengerGoingToHome value) passengerGoingToHome,
+    required TResult Function(PassengerBooKTripSuccess value)
+        passengerBooKTripSuccess,
+    required TResult Function(PassengerBooKTripLoading value)
+        passengerBooKTripLoading,
+    required TResult Function(PassengerBooKTripFailure value)
+        passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
+  }) {
+    return passengerAllBookSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(AddBookLoading value)? addBookLoading,
+    TResult? Function(AddBookSuccess value)? addBookSuccess,
+    TResult? Function(AddBookFailure value)? addBookFailure,
+    TResult? Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult? Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult? Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult? Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult? Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult? Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(AddBookLoading value)? addBookLoading,
+    TResult Function(AddBookSuccess value)? addBookSuccess,
+    TResult Function(AddBookFailure value)? addBookFailure,
+    TResult Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookSuccess != null) {
+      return passengerAllBookSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PassengerAllBookSuccess implements PassengerHomeState {
+  const factory PassengerAllBookSuccess(
+          {required final List<PassengerBookResponse> data}) =
+      _$PassengerAllBookSuccessImpl;
+
+  List<PassengerBookResponse> get data;
+  @JsonKey(ignore: true)
+  _$$PassengerAllBookSuccessImplCopyWith<_$PassengerAllBookSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PassengerAllBookFailureImplCopyWith<$Res> {
+  factory _$$PassengerAllBookFailureImplCopyWith(
+          _$PassengerAllBookFailureImpl value,
+          $Res Function(_$PassengerAllBookFailureImpl) then) =
+      __$$PassengerAllBookFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({DioException apiError});
+}
+
+/// @nodoc
+class __$$PassengerAllBookFailureImplCopyWithImpl<$Res>
+    extends _$PassengerHomeStateCopyWithImpl<$Res,
+        _$PassengerAllBookFailureImpl>
+    implements _$$PassengerAllBookFailureImplCopyWith<$Res> {
+  __$$PassengerAllBookFailureImplCopyWithImpl(
+      _$PassengerAllBookFailureImpl _value,
+      $Res Function(_$PassengerAllBookFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? apiError = null,
+  }) {
+    return _then(_$PassengerAllBookFailureImpl(
+      apiError: null == apiError
+          ? _value.apiError
+          : apiError // ignore: cast_nullable_to_non_nullable
+              as DioException,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PassengerAllBookFailureImpl implements PassengerAllBookFailure {
+  const _$PassengerAllBookFailureImpl({required this.apiError});
+
+  @override
+  final DioException apiError;
+
+  @override
+  String toString() {
+    return 'PassengerHomeState.passengerAllBookFailure(apiError: $apiError)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassengerAllBookFailureImpl &&
+            (identical(other.apiError, apiError) ||
+                other.apiError == apiError));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, apiError);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PassengerAllBookFailureImplCopyWith<_$PassengerAllBookFailureImpl>
+      get copyWith => __$$PassengerAllBookFailureImplCopyWithImpl<
+          _$PassengerAllBookFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getStationPassengerLineLoading,
+    required TResult Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)
+        getStationLineSuccess,
+    required TResult Function() getStationLineLoading,
+    required TResult Function(List<BusLineResponse> driverStationLinkResponse)
+        getBusLineSuccess,
+    required TResult Function(DioException apiError) getStationLineFailure,
+    required TResult Function() postBusLineLoading,
+    required TResult Function() postBusLineSuccess,
+    required TResult Function(DioException apiError) postBusLineFailure,
+    required TResult Function() allTripsLoading,
+    required TResult Function(List<AllTripResponse> allTripsResponseList)
+        allTripsSuccess,
+    required TResult Function(DioException apiError) allTripsFailure,
+    required TResult Function() addTripsLoading,
+    required TResult Function() addTripsSuccess,
+    required TResult Function(DioException apiError) addTripsFailure,
+    required TResult Function() addBookLoading,
+    required TResult Function() addBookSuccess,
+    required TResult Function(DioException apiError) addBookFailure,
+    required TResult Function() passengerProfileLoading,
+    required TResult Function() passengerPaymentLoading,
+    required TResult Function() passengerPaymentSuccess,
+    required TResult Function(DioException apiError) passengerPaymentFailure,
+    required TResult Function(PassengerProfileResponse data)
+        passengerProfileSuccess,
+    required TResult Function(DioException apiError) passengerProfileFailure,
+    required TResult Function() passengerGoingToHome,
+    required TResult Function(PassengerBookTripResponse response)
+        passengerBooKTripSuccess,
+    required TResult Function(int index) passengerBooKTripLoading,
+    required TResult Function(DioException failure) passengerBooKTripFailure,
+    required TResult Function() passengerAllBookLoading,
+    required TResult Function(List<PassengerBookResponse> data)
+        passengerAllBookSuccess,
+    required TResult Function(DioException apiError) passengerAllBookFailure,
+  }) {
+    return passengerAllBookFailure(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getStationPassengerLineLoading,
+    TResult? Function(
+            List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult? Function()? getStationLineLoading,
+    TResult? Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult? Function(DioException apiError)? getStationLineFailure,
+    TResult? Function()? postBusLineLoading,
+    TResult? Function()? postBusLineSuccess,
+    TResult? Function(DioException apiError)? postBusLineFailure,
+    TResult? Function()? allTripsLoading,
+    TResult? Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult? Function(DioException apiError)? allTripsFailure,
+    TResult? Function()? addTripsLoading,
+    TResult? Function()? addTripsSuccess,
+    TResult? Function(DioException apiError)? addTripsFailure,
+    TResult? Function()? addBookLoading,
+    TResult? Function()? addBookSuccess,
+    TResult? Function(DioException apiError)? addBookFailure,
+    TResult? Function()? passengerProfileLoading,
+    TResult? Function()? passengerPaymentLoading,
+    TResult? Function()? passengerPaymentSuccess,
+    TResult? Function(DioException apiError)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult? Function(DioException apiError)? passengerProfileFailure,
+    TResult? Function()? passengerGoingToHome,
+    TResult? Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult? Function(int index)? passengerBooKTripLoading,
+    TResult? Function(DioException failure)? passengerBooKTripFailure,
+    TResult? Function()? passengerAllBookLoading,
+    TResult? Function(List<PassengerBookResponse> data)?
+        passengerAllBookSuccess,
+    TResult? Function(DioException apiError)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookFailure?.call(apiError);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getStationPassengerLineLoading,
+    TResult Function(List<DriverStationLinkResponse> driverStationLinkResponse)?
+        getStationLineSuccess,
+    TResult Function()? getStationLineLoading,
+    TResult Function(List<BusLineResponse> driverStationLinkResponse)?
+        getBusLineSuccess,
+    TResult Function(DioException apiError)? getStationLineFailure,
+    TResult Function()? postBusLineLoading,
+    TResult Function()? postBusLineSuccess,
+    TResult Function(DioException apiError)? postBusLineFailure,
+    TResult Function()? allTripsLoading,
+    TResult Function(List<AllTripResponse> allTripsResponseList)?
+        allTripsSuccess,
+    TResult Function(DioException apiError)? allTripsFailure,
+    TResult Function()? addTripsLoading,
+    TResult Function()? addTripsSuccess,
+    TResult Function(DioException apiError)? addTripsFailure,
+    TResult Function()? addBookLoading,
+    TResult Function()? addBookSuccess,
+    TResult Function(DioException apiError)? addBookFailure,
+    TResult Function()? passengerProfileLoading,
+    TResult Function()? passengerPaymentLoading,
+    TResult Function()? passengerPaymentSuccess,
+    TResult Function(DioException apiError)? passengerPaymentFailure,
+    TResult Function(PassengerProfileResponse data)? passengerProfileSuccess,
+    TResult Function(DioException apiError)? passengerProfileFailure,
+    TResult Function()? passengerGoingToHome,
+    TResult Function(PassengerBookTripResponse response)?
+        passengerBooKTripSuccess,
+    TResult Function(int index)? passengerBooKTripLoading,
+    TResult Function(DioException failure)? passengerBooKTripFailure,
+    TResult Function()? passengerAllBookLoading,
+    TResult Function(List<PassengerBookResponse> data)? passengerAllBookSuccess,
+    TResult Function(DioException apiError)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookFailure != null) {
+      return passengerAllBookFailure(apiError);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetStationPassengerLineLoading value)
+        getStationPassengerLineLoading,
+    required TResult Function(GetStationLineSuccess value)
+        getStationLineSuccess,
+    required TResult Function(GetStationLineLoading value)
+        getStationLineLoading,
+    required TResult Function(GetBusLineSuccess value) getBusLineSuccess,
+    required TResult Function(GetStationLineFailure value)
+        getStationLineFailure,
+    required TResult Function(PostBusLineLoading value) postBusLineLoading,
+    required TResult Function(PostBusLineSuccess value) postBusLineSuccess,
+    required TResult Function(PostBusLineFailure value) postBusLineFailure,
+    required TResult Function(AllTripsLoading value) allTripsLoading,
+    required TResult Function(AllTripsSuccess value) allTripsSuccess,
+    required TResult Function(AllTripsFailure value) allTripsFailure,
+    required TResult Function(AddTripsLoading value) addTripsLoading,
+    required TResult Function(AddTripsSuccess value) addTripsSuccess,
+    required TResult Function(AddTripsFailure value) addTripsFailure,
+    required TResult Function(AddBookLoading value) addBookLoading,
+    required TResult Function(AddBookSuccess value) addBookSuccess,
+    required TResult Function(AddBookFailure value) addBookFailure,
+    required TResult Function(PassengerProfileLoading value)
+        passengerProfileLoading,
+    required TResult Function(PassengerPaymentLoading value)
+        passengerPaymentLoading,
+    required TResult Function(PassengerPaymentSuccess value)
+        passengerPaymentSuccess,
+    required TResult Function(PassengerPaymentFailure value)
+        passengerPaymentFailure,
+    required TResult Function(PassengerProfileSuccess value)
+        passengerProfileSuccess,
+    required TResult Function(PassengerProfileFailure value)
+        passengerProfileFailure,
+    required TResult Function(PassengerGoingToHome value) passengerGoingToHome,
+    required TResult Function(PassengerBooKTripSuccess value)
+        passengerBooKTripSuccess,
+    required TResult Function(PassengerBooKTripLoading value)
+        passengerBooKTripLoading,
+    required TResult Function(PassengerBooKTripFailure value)
+        passengerBooKTripFailure,
+    required TResult Function(PassengerAllBookLoading value)
+        passengerAllBookLoading,
+    required TResult Function(PassengerAllBookSuccess value)
+        passengerAllBookSuccess,
+    required TResult Function(PassengerAllBookFailure value)
+        passengerAllBookFailure,
+  }) {
+    return passengerAllBookFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult? Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult? Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult? Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult? Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult? Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult? Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult? Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult? Function(AllTripsLoading value)? allTripsLoading,
+    TResult? Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult? Function(AllTripsFailure value)? allTripsFailure,
+    TResult? Function(AddTripsLoading value)? addTripsLoading,
+    TResult? Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult? Function(AddTripsFailure value)? addTripsFailure,
+    TResult? Function(AddBookLoading value)? addBookLoading,
+    TResult? Function(AddBookSuccess value)? addBookSuccess,
+    TResult? Function(AddBookFailure value)? addBookFailure,
+    TResult? Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult? Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult? Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult? Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult? Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult? Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult? Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult? Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult? Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult? Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult? Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult? Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult? Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+  }) {
+    return passengerAllBookFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetStationPassengerLineLoading value)?
+        getStationPassengerLineLoading,
+    TResult Function(GetStationLineSuccess value)? getStationLineSuccess,
+    TResult Function(GetStationLineLoading value)? getStationLineLoading,
+    TResult Function(GetBusLineSuccess value)? getBusLineSuccess,
+    TResult Function(GetStationLineFailure value)? getStationLineFailure,
+    TResult Function(PostBusLineLoading value)? postBusLineLoading,
+    TResult Function(PostBusLineSuccess value)? postBusLineSuccess,
+    TResult Function(PostBusLineFailure value)? postBusLineFailure,
+    TResult Function(AllTripsLoading value)? allTripsLoading,
+    TResult Function(AllTripsSuccess value)? allTripsSuccess,
+    TResult Function(AllTripsFailure value)? allTripsFailure,
+    TResult Function(AddTripsLoading value)? addTripsLoading,
+    TResult Function(AddTripsSuccess value)? addTripsSuccess,
+    TResult Function(AddTripsFailure value)? addTripsFailure,
+    TResult Function(AddBookLoading value)? addBookLoading,
+    TResult Function(AddBookSuccess value)? addBookSuccess,
+    TResult Function(AddBookFailure value)? addBookFailure,
+    TResult Function(PassengerProfileLoading value)? passengerProfileLoading,
+    TResult Function(PassengerPaymentLoading value)? passengerPaymentLoading,
+    TResult Function(PassengerPaymentSuccess value)? passengerPaymentSuccess,
+    TResult Function(PassengerPaymentFailure value)? passengerPaymentFailure,
+    TResult Function(PassengerProfileSuccess value)? passengerProfileSuccess,
+    TResult Function(PassengerProfileFailure value)? passengerProfileFailure,
+    TResult Function(PassengerGoingToHome value)? passengerGoingToHome,
+    TResult Function(PassengerBooKTripSuccess value)? passengerBooKTripSuccess,
+    TResult Function(PassengerBooKTripLoading value)? passengerBooKTripLoading,
+    TResult Function(PassengerBooKTripFailure value)? passengerBooKTripFailure,
+    TResult Function(PassengerAllBookLoading value)? passengerAllBookLoading,
+    TResult Function(PassengerAllBookSuccess value)? passengerAllBookSuccess,
+    TResult Function(PassengerAllBookFailure value)? passengerAllBookFailure,
+    required TResult orElse(),
+  }) {
+    if (passengerAllBookFailure != null) {
+      return passengerAllBookFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PassengerAllBookFailure implements PassengerHomeState {
+  const factory PassengerAllBookFailure(
+      {required final DioException apiError}) = _$PassengerAllBookFailureImpl;
+
+  DioException get apiError;
+  @JsonKey(ignore: true)
+  _$$PassengerAllBookFailureImplCopyWith<_$PassengerAllBookFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

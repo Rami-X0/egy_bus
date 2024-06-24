@@ -79,11 +79,13 @@ class _StationTripItemState extends State<StationTripItem> {
                 setState(() {
                   _start = 120;
                   context.read<PassengerHomeCubit>().counter = 1;
+                  context.read<PassengerHomeCubit>().counterSeatsBooked = 1;
                   context.read<PassengerHomeCubit>().totalValue = 0;
                 });
                 context.read<PassengerHomeCubit>().emitAllTrip();
               },
             ),
+
           ],
         ),
       ),
@@ -104,10 +106,11 @@ class _StationTripItemState extends State<StationTripItem> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-
                       children: [
-                        Text('Arrived:${timerText.toString()}',style: TextStyles.font15DarkBlueMedium,),
-
+                        Text(
+                          'Arrived:${timerText.toString()}',
+                          style: TextStyles.font15DarkBlueMedium,
+                        ),
                         Container(
                           width: 50.0.w,
                           height: 60.h,
@@ -374,16 +377,26 @@ class _StationTripItemState extends State<StationTripItem> {
                       onPressed: () {
                         context
                             .read<PassengerHomeCubit>()
-                            .emitPassengerPayment()
+                            .emitPassengerBookTrip(widget.data.id, 1, context)
                             .then((onValue) {
-                          setState(() {
-                            context.read<PassengerHomeCubit>().counter = 1;
-                            context.read<PassengerHomeCubit>().totalValue =
-                                widget.data.price;
+                          context
+                              .read<PassengerHomeCubit>()
+                              .emitPassengerPayment()
+                              .then((onValue) {
+                            setState(() {
+                              context.read<PassengerHomeCubit>().counter = 1;
+                              context
+                                  .read<PassengerHomeCubit>()
+                                  .counterSeatsBooked = 1;
+
+                              context.read<PassengerHomeCubit>().totalValue =
+                                  widget.data.price;
+                            });
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => Ticket(
+                                      data: widget.data,
+                                    )));
                           });
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (_) =>
-                                  const TripPassengerCompletedScreen()));
                         });
                       },
                       style: ElevatedButton.styleFrom(
@@ -466,12 +479,22 @@ class _CounterState extends State<Counter> {
                 IconButton(
                     onPressed: () {
                       setState(() {
-                        if (context.read<PassengerHomeCubit>().counter < 14) {
-                          context.read<PassengerHomeCubit>().counter++;
-                          context.read<PassengerHomeCubit>().totalValue =
-                              widget.data.price *
-                                  context.read<PassengerHomeCubit>().counter;
+                        if (context
+                                .read<PassengerHomeCubit>()
+                                .counterSeatsBooked <
+                            widget.data.availableSeats) {
+                          context
+                              .read<PassengerHomeCubit>()
+                              .counterSeatsBooked++;
+                          if (context.read<PassengerHomeCubit>().counter < 14) {
+                            context.read<PassengerHomeCubit>().counter++;
+                            context.read<PassengerHomeCubit>().totalValue =
+                                widget.data.price *
+                                    context.read<PassengerHomeCubit>().counter;
+                          }
                         }
+                        debugPrint(
+                            'counterSeatsBooked${context.read<PassengerHomeCubit>().counterSeatsBooked.toString()}');
                       });
                     },
                     icon: Icon(Icons.add, color: Colors.grey, size: 25.w)),
@@ -584,6 +607,256 @@ class TripPassengerCompletedScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Ticket extends StatelessWidget {
+  final AllTripResponse data;
+
+  const Ticket({super.key, required this.data});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xffEEEEEE),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.only(
+              top: 15.h,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(16.0),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      width: 50.0.w,
+                      height: 60.h,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Icon(
+                        Icons.directions_bus,
+                        size: 30.0.w,
+                        color: const Color(0xffB0E6F0),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 8.0.h),
+                Text(
+                  ' Bus Ticket',
+                  style: TextStyle(
+                    fontSize: 18.0.sp,
+                    color: const Color(0xff666666),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 8.0.h),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text('Time :'),
+                    Gap(8.0.w),
+                    Text(
+                      DateTime.now().toIso8601String().substring(0, 16),
+                      style: TextStyle(
+                        fontSize: 16.0.sp,
+                        color: const Color(0xff666666),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16.0.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.w),
+                      child: Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 4.0.h),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                     "Bus Plate:${ data.busPlate}",
+                      style: TextStyle(
+                        fontSize: 16.0.sp,
+                        color: const Color(0xff666666),
+                      ),
+                    ),
+                    Text(
+                     "Available Seats:${ data.availableSeats}",
+                      style: TextStyle(
+                        fontSize: 16.0.sp,
+                        color: const Color(0xff666666),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16.0.h),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.w),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Text(
+                          data.fromStationName,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 16.0.sp,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff0B4550),
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      Expanded(
+                        flex: 2,
+                        child: Text(
+                          data.toStationName,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 16.0.sp,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xff0B4550),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 16.0.h),
+                Row(
+                  children: List.generate(
+                    36,
+                    (index) => Padding(
+                      padding: const EdgeInsets.only(right: 5.0),
+                      child: Container(
+                        color: Colors.grey,
+                        height: 2,
+                        width: 5,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8.w),
+                  child: Row(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Passenger Name',
+                              style: TextStyle(
+                                fontSize: 14.0.sp,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            SizedBox(height: 4.0.h),
+                            Text(
+                              passengerName,
+                              style: TextStyle(
+                                fontSize: 16.0.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8.0.h),
+                SizedBox(height: 16.0.h),
+                Container(
+                  height: 85.h,
+                  width: 400.w,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffB0E6F0),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(16.0.r),
+                      bottomRight: Radius.circular(16.0.r),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        '#${data.id}965187',
+                        style: TextStyle(
+                          fontSize: 18.0.sp,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 8.0.h),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FaIcon(
+                            FontAwesomeIcons.barcode,
+                          ),
+                          FaIcon(
+                            FontAwesomeIcons.barcode,
+                          ),
+                          FaIcon(
+                            FontAwesomeIcons.barcode,
+                          ),
+                          FaIcon(
+                            FontAwesomeIcons.barcode,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 16.0.h),
+          ElevatedButton.icon(
+            onPressed: () {
+              context.pushNamedAndRemoveUntil(Routes.passengerHome);
+            },
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(300.w, 60.h),
+              backgroundColor: const Color(0xff00ADCF),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0.r),
+              ),
+            ),
+            label: const Text(
+              'Done',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ],
       ),
     );
   }

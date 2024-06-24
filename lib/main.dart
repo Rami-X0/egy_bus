@@ -29,6 +29,8 @@ void main() async{
   driverStationLat=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverStationLat);
   driverStationLon=await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey. driverStationLon);
   await ScreenUtil.ensureScreenSize();
+  debugPrint('main${stationLat.toString()}');
+  debugPrint('main${stationLong.toString()}');
   runApp(const EgyBus());
 }
 

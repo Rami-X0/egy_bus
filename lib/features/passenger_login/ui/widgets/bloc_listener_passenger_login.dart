@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:egy_bus/core/caching/app_shared_pref.dart';
+import 'package:egy_bus/core/caching/app_shared_pref_key.dart';
 import 'package:egy_bus/core/di/dependency_injection.dart';
 import 'package:egy_bus/core/helper/extension.dart';
 import 'package:egy_bus/core/theming/colors.dart';
@@ -60,7 +62,7 @@ class BlocListenerPassengerLogin extends StatelessWidget {
 Widget _buildBottomSheetStationLink(BuildContext context) {
   context.read<PassengerHomeCubit>().getPermissionLocation(context);
   context.read<PassengerHomeCubit>().emitBusLineResponse();
-  return BlocProvider.value(
+   return BlocProvider.value(
     value: getIt<PassengerHomeCubit>(),
     child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -97,6 +99,7 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
                           return const AppLoading();
                         },
                         getBusLineSuccess: (data) {
+
                           return Padding(
                             padding: EdgeInsets.symmetric(
                                 horizontal: 15.w, vertical: 20.h),
@@ -128,7 +131,7 @@ Widget _buildBottomSheetStationLink(BuildContext context) {
                                       onPressed: () {
                                         context
                                             .read<PassengerHomeCubit>()
-                                            .emitAddBook(0,context);
+                                            .emitAddBook(context);
                                       },
                                       text: state is AddBookLoading
                                           ? 'Wait...'

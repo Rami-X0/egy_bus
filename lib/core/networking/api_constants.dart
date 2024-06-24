@@ -19,5 +19,6 @@ class ApiConstants {
   static const String passengerStation = "/api/Station";
   static const String passengerPayment = "/api/Payment";
   static const String passengerBookTrip = "/api/Booking/BookTrip";
+  static const String passengerGetAllBookTrip = "/api/Booking/GetBookingByPassangerId";
 
 }

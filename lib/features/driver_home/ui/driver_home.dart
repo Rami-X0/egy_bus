@@ -84,7 +84,7 @@ class DriverHomeScreen extends StatelessWidget {
                   },
                   allTripsSuccess: (data) {
                     return ListView.separated(
-                      separatorBuilder: (context, index) => Gap(15.h),
+                      separatorBuilder: (context, index) => Gap(data[index].availableSeats == 0?0:15.h),
                       itemCount: data.length,
                       itemBuilder: (context, index) {
                         return Visibility(

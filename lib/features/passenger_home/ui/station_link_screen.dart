@@ -24,6 +24,7 @@ class _RadioListState extends State<RadioList> {
 
   @override
   Widget build(BuildContext context) {
+
     final cubit = context.read<PassengerHomeCubit>();
     if (stationLong == null || stationLat == null) {
       setState(() {

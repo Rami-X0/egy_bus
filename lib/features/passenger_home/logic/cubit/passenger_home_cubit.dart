@@ -5,8 +5,9 @@ import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/widgets/app_snack_bar.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_add_station_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/all_book_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_request.dart';
-import 'package:egy_bus/features/passenger_home/data/repo/passenger_login_repo.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_home_repo.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_payment_response.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,7 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
   double? positionLat;
   double? positionLong;
   int counter = 1;
+  int counterSeatsBooked = 1;
   double? totalValue;
   int? bookingId;
 
@@ -89,10 +91,12 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
     });
   }
 
-  Future<void> emitAddBook(int index, BuildContext context) async {
-    emit(PassengerHomeState.addBookLoading(index: index));
-    await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
-    await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
+  Future<void> emitAddBook(BuildContext context) async {
+    passengerLong =
+        await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
+    passengerLat =
+        await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
+    emit(const PassengerHomeState.addBookLoading());
     final response = await _passengerHomeRepo.addBook(
       AddBookModel(
         passengerLat: passengerLat ?? positionLat,
@@ -111,6 +115,7 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
           text: 'You can,\ t book this trip',
           backGroundColor: Colors.red,
           context: context);
+      AppSharedPref.removeKey(key: AppSharedPrefKey.passengerUserId);
       emit(PassengerHomeState.addBookFailure(apiError: failure));
     });
   }
@@ -141,6 +146,7 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
 
   Future<void> getPermissionLocation(BuildContext context) async {
     LocationPermission permission = await Geolocator.checkPermission();
+
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
     } else {
@@ -149,19 +155,15 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
       Position position = await Geolocator.getCurrentPosition(
+          forceAndroidLocationManager: true,
           desiredAccuracy: LocationAccuracy.high);
       positionLong = position.longitude;
       positionLat = position.latitude;
-      await AppSharedPref.sharedPrefSet(
+      AppSharedPref.sharedPrefSet(
           key: AppSharedPrefKey.passengerLong, value: position.longitude);
-      await AppSharedPref.sharedPrefSet(
+      AppSharedPref.sharedPrefSet(
           key: AppSharedPrefKey.passengerLat, value: position.latitude);
-      emit(const PassengerHomeState.postBusLineLoading());
-      debugPrint('passenget${positionLat}');
-      debugPrint('passenget${positionLong}');
     }
-    await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLong);
-    await AppSharedPref.sharedPrefGet(key: AppSharedPrefKey.passengerLat);
   }
 
   Future<void> emitBusLineResponse() async {
@@ -204,22 +206,32 @@ class PassengerHomeCubit extends Cubit<PassengerHomeState> {
       PassengerBookTripRequest(
         passengerId: passengerUserId,
         tripId: tripId,
-        seatsBooked: 1,
-        amountPaid: 15,
+        seatsBooked: counterSeatsBooked,
+        amountPaid: totalValue!.toInt(),
       ),
     );
 
     response.when(success: (data) {
       bookingId = data.bookingId;
       emit(PassengerHomeState.passengerBooKTripSuccess(response: data));
-      appSnackBar(
-          text: data.message, backGroundColor: Colors.green, context: context);
     }, failure: (failure) {
       emit(PassengerHomeState.passengerBooKTripFailure(failure: failure));
       appSnackBar(
           text: 'can\'t book this trip',
           backGroundColor: Colors.red,
           context: context);
+    });
+  }
+
+  Future<void> emitPassengerAllBook() async {
+    emit(const PassengerHomeState.passengerAllBookLoading());
+
+    final response = await _passengerHomeRepo.passengerAllBook(passengerUserId);
+
+    response.when(success: (data) {
+      emit(PassengerHomeState.passengerAllBookSuccess(data: data));
+    }, failure: (failure) {
+      emit(PassengerHomeState.passengerAllBookFailure(apiError: failure));
     });
   }
 }

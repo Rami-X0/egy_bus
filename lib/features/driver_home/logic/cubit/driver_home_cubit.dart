@@ -8,7 +8,7 @@ import 'package:egy_bus/features/driver_home/data/models/driver_add_station_requ
 import 'package:egy_bus/features/driver_home/data/repo/driver_login_repo.dart';
 import 'package:egy_bus/features/driver_home/logic/cubit/driver_home_state.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
-import 'package:egy_bus/features/passenger_home/data/repo/passenger_login_repo.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/passenger_home_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
@@ -174,6 +174,7 @@ class DriverHomeCubit extends Cubit<DriverHomeState> {
     if (permission == LocationPermission.whileInUse ||
         permission == LocationPermission.always) {
       Position position = await Geolocator.getCurrentPosition(
+          forceAndroidLocationManager: true,
           desiredAccuracy: LocationAccuracy.high);
       positionLong = position.longitude;
       positionLat = position.latitude;

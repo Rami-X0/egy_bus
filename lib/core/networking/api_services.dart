@@ -8,6 +8,7 @@ import 'package:egy_bus/features/driver_login/data/models/driver_login_request.d
 import 'package:egy_bus/features/driver_login/data/models/driver_login_response.dart';
 import 'package:egy_bus/features/driver_sign_up/data/models/driver_sign_up_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/all_book_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_response.dart';
@@ -70,4 +71,6 @@ abstract class ApiServices {
   Future passengerPayment(@Body() PassengerPaymentRequest body);
 @POST(ApiConstants.passengerBookTrip)
   Future<PassengerBookTripResponse> passengerBooKTrip(@Body() PassengerBookTripRequest body);
+@GET('${ApiConstants.passengerGetAllBookTrip}/{id}')
+  Future<List<PassengerBookResponse>> passengerAllBooK(@Path('id') int id);
 }

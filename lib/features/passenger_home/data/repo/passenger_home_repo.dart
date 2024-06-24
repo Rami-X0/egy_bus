@@ -5,6 +5,7 @@ import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart'
 import 'package:egy_bus/features/driver_home/data/models/driver_add_station_request.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_station_link_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/add_book_model.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/all_book_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_request.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_response.dart';
@@ -91,6 +92,15 @@ class PassengerHomeRepo {
   Future<ApiResult<PassengerBookTripResponse>> passengerBookTrip(PassengerBookTripRequest body) async {
     try {
       final response = await _apiServices.passengerBooKTrip(body);
+
+      return ApiResult.success(response);
+    } on DioException catch (failure) {
+      return ApiResult.failure(failure);
+    }
+  }
+  Future<ApiResult<List<PassengerBookResponse>>> passengerAllBook(int id) async {
+    try {
+      final response = await _apiServices.passengerAllBooK(id);
 
       return ApiResult.success(response);
     } on DioException catch (failure) {

@@ -3,9 +3,11 @@ import 'package:egy_bus/core/routing/routes.dart';
 import 'package:egy_bus/core/theming/colors.dart';
 import 'package:egy_bus/core/theming/styles.dart';
 import 'package:egy_bus/core/widgets/app_loading.dart';
+import 'package:egy_bus/core/widgets/app_snack_bar.dart';
 import 'package:egy_bus/core/widgets/app_text_button.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_cubit.dart';
 import 'package:egy_bus/features/passenger_home/logic/cubit/passenger_home_state.dart';
+import 'package:egy_bus/features/passenger_home/ui/all_book_screen.dart';
 import 'package:egy_bus/features/passenger_home/ui/station_trip_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,6 +39,15 @@ class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
           ),
           centerTitle: true,
           actions: [
+            TextButton(
+              onPressed: () {
+Navigator.of(context).push(MaterialPageRoute(builder: (_)=>const AllBookScreen()));
+              },
+              child: const Text(
+                'My Book',
+                style: TextStyle(color: Color(0xff00ADCF)),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 8.0.h,
@@ -68,7 +79,8 @@ class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
                   },
                   allTripsSuccess: (data) {
                     return ListView.separated(
-                      separatorBuilder: (context, index) => Gap(15.h),
+                      separatorBuilder: (context, index) =>
+                          Gap(data[index].availableSeats == 0 ? 0 : 15.h),
                       itemCount: data.length,
                       itemBuilder: (context, index) {
                         return GestureDetector(
@@ -79,8 +91,7 @@ class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
                             //         )));
                           },
                           child: Visibility(
-                            visible:
-                                data[index].availableSeats == 0 ? false : true,
+                            visible: data[index].availableSeats != 0,
                             child: Container(
                               height: 261.h,
                               decoration: BoxDecoration(
@@ -170,7 +181,7 @@ class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
                                         ),
                                         const Spacer(),
                                         const Text(
-                                          'Available State',
+                                          'Available Seats',
                                           style: TextStyle(color: Colors.grey),
                                         ),
                                       ],
@@ -283,28 +294,19 @@ class _PassengerHomeScreenState extends State<PassengerHomeScreen> {
                                                   state.index == index;
                                               return AppTextButton(
                                                 onPressed: () {
-                                                  context
-                                                      .read<
-                                                          PassengerHomeCubit>()
-                                                      .emitPassengerBookTrip(
-                                                          data[index].id,
-                                                          index,
-                                                          context)
-                                                      .then(
-                                                    (onValue) {
-
-                                                        Navigator.of(context)
-                                                            .push(
-                                                          MaterialPageRoute(
-                                                            builder: (_) =>
-                                                                StationTripItem(
-                                                              data: data[index],
-                                                            ),
-                                                          ),
-                                                        );
-
-                                                    },
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                      builder: (_) =>
+                                                          StationTripItem(
+                                                        data: data[index],
+                                                      ),
+                                                    ),
                                                   );
+                                                  appSnackBar(
+                                                      text: 'Book Trip Success',
+                                                      backGroundColor:
+                                                          Colors.green,
+                                                      context: context);
                                                 },
                                                 text: isLoading
                                                     ? 'Loading...'

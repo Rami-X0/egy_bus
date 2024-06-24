@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:egy_bus/features/driver_home/data/models/all_trip_response.dart';
 import 'package:egy_bus/features/driver_home/data/models/driver_station_link_response.dart';
+import 'package:egy_bus/features/passenger_home/data/repo/all_book_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/bus_line_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_book_trip_response.dart';
 import 'package:egy_bus/features/passenger_home/data/repo/passenger_profile_reponse.dart';
@@ -51,8 +52,7 @@ class PassengerHomeState with _$PassengerHomeState {
   const factory PassengerHomeState.addTripsFailure(
       {required DioException apiError}) = AddTripsFailure;
 
-  const factory PassengerHomeState.addBookLoading({required int index}) =
-      AddBookLoading;
+  const factory PassengerHomeState.addBookLoading() = AddBookLoading;
 
   const factory PassengerHomeState.addBookSuccess() = AddBookSuccess;
 
@@ -80,17 +80,26 @@ class PassengerHomeState with _$PassengerHomeState {
   const factory PassengerHomeState.passengerGoingToHome() =
       PassengerGoingToHome;
 
-  const factory PassengerHomeState.passengerBooKTripSuccess({
-    required PassengerBookTripResponse response
-}) =
-      PassengerBooKTripSuccess;
+  const factory PassengerHomeState.passengerBooKTripSuccess(
+      {required PassengerBookTripResponse response}) = PassengerBooKTripSuccess;
 
-  const factory PassengerHomeState.passengerBooKTripLoading({
-    required int index
-}) =
-      PassengerBooKTripLoading;
+  const factory PassengerHomeState.passengerBooKTripLoading(
+      {required int index}) = PassengerBooKTripLoading;
 
   const factory PassengerHomeState.passengerBooKTripFailure({
     required DioException failure,
   }) = PassengerBooKTripFailure;
+
+  const factory PassengerHomeState.passengerAllBookLoading() =
+  PassengerAllBookLoading;
+
+  const factory PassengerHomeState.passengerAllBookSuccess(
+  {required List<PassengerBookResponse> data}
+      ) =
+  PassengerAllBookSuccess;
+
+  const factory PassengerHomeState.passengerAllBookFailure(
+      {required DioException apiError}) = PassengerAllBookFailure;
+
+
 }
